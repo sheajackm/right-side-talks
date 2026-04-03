@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- PRIMARY SEO -->
+<title>Right Side Talks — National Youth Conservative Media Organization</title>
+<meta name="description" content="Right Side Talks is a national youth conservative media organization. Watch bold conservative commentary, political analysis, campus coverage, and more — from the next generation of American voices." />
+<meta name="keywords" content="conservative media, youth conservative, conservative podcast, right side talks, conservative commentary, campus conservative, America first, conservative news, young conservatives" />
+<meta name="author" content="Right Side Talks LLC" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.rightsidetalksmedia.com/" />
+
+<!-- OPEN GRAPH (Facebook, Instagram, LinkedIn previews) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.rightsidetalksmedia.com/" />
+<meta property="og:title" content="Right Side Talks — National Youth Conservative Media" />
+<meta property="og:description" content="Bold. Unapologetic. Conservative. Right Side Talks is the home of the next generation of American conservative voices. Watch, listen, and join the movement." />
+<meta property="og:image" content="https://www.rightsidetalksmedia.com/og-image.jpg" />
+<meta property="og:site_name" content="Right Side Talks" />
+<meta property="og:locale" content="en_US" />
+
+<!-- TWITTER / X CARD -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@rightsidetalks" />
+<meta name="twitter:creator" content="@rightsidetalks" />
+<meta name="twitter:title" content="Right Side Talks — National Youth Conservative Media" />
+<meta name="twitter:description" content="Bold. Unapologetic. Conservative. Right Side Talks is the home of the next generation of American conservative voices." />
+<meta name="twitter:image" content="https://www.rightsidetalksmedia.com/og-image.jpg" />
+
+<!-- STRUCTURED DATA (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Right Side Talks",
+  "alternateName": "Right Side Talks LLC",
+  "url": "https://www.rightsidetalksmedia.com",
+  "logo": "https://www.rightsidetalksmedia.com/og-image.jpg",
+  "description": "National youth conservative media organization producing bold political commentary, news analysis, and campus coverage.",
+  "foundingLocation": "United States",
+  "sameAs": [
+    "https://m.youtube.com/@RightSideTalks",
+    "https://www.instagram.com/rightside_talks/",
+    "https://x.com/rightsidetalks",
+    "https://www.facebook.com/p/Right-Side-Talks-61583993844581/",
+    "https://www.tiktok.com/@right.side.talks"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "our team",
+    "contactType": "general inquiry"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red: #D91E3C;
+  --red-dark: #A8152D;
+  --red-light: #FDF0F2;
+  --blue: #001F5B;
+  --blue-mid: #0A3080;
+  --blue-light: #E6ECF9;
+  --white: #FFFFFF;
+  --off-white: #F4F6FB;
+  --gold: #D4A843;
+  --text-dark: #080F20;
+  --text-muted: #4A5570;
+  --border: rgba(0,31,91,0.1);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-cond: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --grad-red: linear-gradient(135deg, #E8253F 0%, #A8152D 100%);
+  --grad-blue: linear-gradient(135deg, #0A3080 0%, #001040 100%);
+  --grad-card: linear-gradient(160deg, #ffffff 0%, #f2f5ff 100%);
+  --grad-dark: linear-gradient(160deg, #0D1B40 0%, #060E26 100%);
+  --shadow-sm: 0 2px 12px rgba(0,20,80,0.08);
+  --shadow-md: 0 8px 32px rgba(0,20,80,0.13);
+  --shadow-lg: 0 20px 60px rgba(0,20,80,0.2);
+  --shadow-red: 0 8px 28px rgba(217,30,60,0.32);
+  --shadow-blue: 0 8px 28px rgba(0,31,91,0.28);
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text-dark); background: var(--white); line-height: 1.6; padding-bottom: 40px; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: linear-gradient(90deg, #001040 0%, #001F5B 60%, #0A2870 100%); border-bottom: 2px solid var(--red); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 68px; box-shadow: 0 4px 28px rgba(0,8,40,0.55); }
+.nav-logo { font-family: var(--font-cond); font-size: 23px; font-weight: 800; color: var(--white); letter-spacing: 0.05em; text-decoration: none; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.4); }
+.nav-logo span { background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
+.nav-links a { font-family: var(--font-cond); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--grad-red); transform: scaleX(0); transition: transform 0.2s; border-radius: 2px; }
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta { background: var(--grad-red) !important; color: var(--white) !important; padding: 9px 22px !important; border-radius: 4px !important; box-shadow: var(--shadow-red) !important; transition: box-shadow 0.2s, transform 0.15s !important; }
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { box-shadow: 0 12px 36px rgba(217,30,60,0.5) !important; transform: translateY(-1px) !important; }
+
+/* HAMBURGER */
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; cursor: pointer; background: none; border: none; padding: 6px; border-radius: 4px; transition: background 0.2s; }
+.hamburger:hover { background: rgba(255,255,255,0.1); }
+.hamburger span { display: block; width: 100%; height: 2px; background: var(--white); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; transform-origin: center; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* MOBILE DRAWER */
+.mobile-menu { position: fixed; top: 68px; left: 0; right: 0; background: linear-gradient(160deg, #001040 0%, #001F5B 100%); z-index: 190; padding: 1.5rem 2rem 2rem; box-shadow: 0 20px 48px rgba(0,8,40,0.65); border-bottom: 2px solid rgba(217,30,60,0.5); pointer-events: none; opacity: 0; transform: translateY(-12px); transition: opacity 0.3s ease, transform 0.3s ease; }
+.mobile-menu.open { pointer-events: all; opacity: 1; transform: translateY(0); }
+.mobile-menu ul { list-style: none; }
+.mobile-menu ul li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+.mobile-menu ul li a { display: block; font-family: var(--font-cond); font-size: 19px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 0; transition: color 0.2s, padding-left 0.2s; }
+.mobile-menu ul li a:hover { color: var(--white); padding-left: 8px; }
+.mobile-menu-cta { display: block; margin-top: 1.5rem; background: var(--grad-red); color: var(--white) !important; font-family: var(--font-cond); font-size: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; padding: 14px; border-radius: 6px; text-decoration: none; box-shadow: var(--shadow-red); }
+
+/* HERO */
+#home { min-height: 100vh; background: var(--grad-dark); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 2rem 5rem; position: relative; overflow: hidden; }
+#home::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(10,48,128,0.55) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(217,30,60,0.12) 0%, transparent 60%); }
+.hero-stars { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 44px 44px; pointer-events: none; }
+.hero-stripe-top { position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, #FF4D6D 50%, var(--red) 100%); box-shadow: 0 2px 18px rgba(217,30,60,0.65); }
+.hero-stripe-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, #FF4D6D 50%, var(--red) 100%); box-shadow: 0 -2px 18px rgba(217,30,60,0.4); }
+.hero-eyebrow { font-family: var(--font-cond); font-size: 13px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); text-shadow: 0 0 20px rgba(212,168,67,0.5); margin-bottom: 1rem; position: relative; }
+.hero-title { font-family: var(--font-display); font-size: clamp(50px, 8.5vw, 100px); font-weight: 900; color: var(--white); line-height: 1.04; margin-bottom: 0.4rem; text-shadow: 0 4px 30px rgba(0,0,0,0.5); position: relative; }
+.hero-title .accent { background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 2px 12px rgba(217,30,60,0.4)); }
+.hero-subtitle { font-family: var(--font-cond); font-size: clamp(18px, 2.8vw, 26px); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.44); margin-bottom: 2rem; position: relative; }
+.hero-desc { max-width: 560px; font-size: 17px; color: rgba(255,255,255,0.64); margin-bottom: 2.5rem; line-height: 1.75; position: relative; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; position: relative; }
+.btn-primary { background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 15px 36px; border-radius: 5px; text-decoration: none; border: none; cursor: pointer; box-shadow: var(--shadow-red); transition: box-shadow 0.2s, transform 0.15s; display: inline-block; }
+.btn-primary:hover { box-shadow: 0 14px 40px rgba(217,30,60,0.48); transform: translateY(-2px); }
+.btn-outline { background: rgba(255,255,255,0.06); color: var(--white); font-family: var(--font-cond); font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 36px; border-radius: 5px; border: 1.5px solid rgba(255,255,255,0.25); text-decoration: none; cursor: pointer; backdrop-filter: blur(4px); transition: border-color 0.2s, background 0.2s, transform 0.15s; display: inline-block; }
+.btn-outline:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+.hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: rgba(255,255,255,0.3); font-family: var(--font-cond); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; }
+.hero-logo { width: 180px; height: 180px; object-fit: contain; border-radius: 20px; margin-bottom: 1.5rem; position: relative; box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 4px rgba(255,255,255,0.08); animation: fadeUp 0.5s ease both; }
+.scroll-line { width: 1px; height: 40px; background: rgba(255,255,255,0.2); animation: scrollPulse 2s ease-in-out infinite; }
+@keyframes scrollPulse { 0%,100%{opacity:0.2;transform:scaleY(1)}50%{opacity:0.7;transform:scaleY(0.65)} }
+
+/* SECTIONS */
+section { padding: 5rem 2rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.75rem; display: inline-block; }
+.section-title { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); font-weight: 700; color: var(--text-dark); line-height: 1.15; margin-bottom: 1rem; }
+.section-title .blue { color: var(--blue-mid); }
+
+/* ABOUT */
+#about { background: linear-gradient(160deg, #F4F6FB 0%, #EBF0FF 100%); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-text p { font-size: 17px; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.75; }
+.about-text p strong { color: var(--text-dark); font-weight: 600; }
+.about-pillars { display: flex; flex-direction: column; gap: 1rem; }
+.pillar { background: linear-gradient(135deg,#fff 0%,#f5f8ff 100%); border-left: 4px solid var(--red); padding: 1.2rem 1.5rem; border-radius: 0 8px 8px 0; box-shadow: var(--shadow-sm); transition: box-shadow 0.2s, transform 0.2s; }
+.pillar:hover { box-shadow: var(--shadow-md); transform: translateX(4px); }
+.pillar h3 { font-family: var(--font-cond); font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue-mid); margin-bottom: 4px; }
+.pillar p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+/* TEAM */
+.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+.team-card { background: var(--grad-card); border: 1px solid rgba(0,31,91,0.08); border-radius: 12px; padding: 2rem 1.25rem 1.75rem; text-align: center; box-shadow: var(--shadow-sm); transition: box-shadow 0.25s, transform 0.25s; }
+.team-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.team-avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg,#E6ECF9 0%,#C8D5F5 100%); border: 3px solid rgba(10,48,128,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.1rem; overflow: hidden; box-shadow: 0 4px 16px rgba(0,31,91,0.15); }
+.team-avatar svg { width: 44px; height: 44px; color: var(--blue-mid); opacity: 0.4; }
+.team-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.team-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+.team-role { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.75rem; display: block; }
+.team-bio { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.team-placeholder .team-name-placeholder { height: 16px; background: rgba(0,31,91,0.08); border-radius: 4px; width: 70%; margin: 0 auto 8px; }
+.team-placeholder .team-role-placeholder { height: 11px; background: rgba(217,30,60,0.1); border-radius: 4px; width: 50%; margin: 0 auto; }
+.team-coming-soon { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(0,31,91,0.2); margin-top: 0.5rem; }
+
+/* STATS */
+.stats-strip { background: var(--grad-blue); padding: 3.5rem 2rem; position: relative; overflow: hidden; }
+.stats-strip::before { content:''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 100% at 50% 0%,rgba(10,48,128,0.5) 0%,transparent 70%); }
+.stats-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; text-align: center; position: relative; }
+.stat-num { font-family: var(--font-display); font-size: 52px; font-weight: 900; color: var(--white); line-height: 1; margin-bottom: 0.25rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+.stat-num span { background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.stat-label { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.44); }
+
+/* SHOWS */
+#shows { background: var(--white); }
+.shows-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; margin-top: 3rem; }
+.show-card { border: 1px solid rgba(0,31,91,0.08); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow 0.25s, transform 0.25s; background: var(--grad-card); }
+.show-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+.show-card-banner { height: 150px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.show-card-banner.red { background: linear-gradient(135deg,#E8253F 0%,#8B0E1F 100%); }
+.show-card-banner.blue { background: linear-gradient(135deg,#0A3080 0%,#000E35 100%); }
+.show-card-banner.dark { background: linear-gradient(135deg,#1A2744 0%,#060E26 100%); }
+.show-card-banner::after { content:''; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(255,255,255,0.08) 0%,transparent 60%); }
+.show-banner-text { font-family: var(--font-cond); font-size: 30px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.1); text-align: center; padding: 0 1rem; line-height: 1.1; }
+.show-icon { position: absolute; width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); z-index: 1; }
+.show-card-body { padding: 1.4rem 1.6rem 1.75rem; }
+.show-tag { display: inline-block; font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: var(--grad-red); color: var(--white); padding: 4px 12px; border-radius: 3px; margin-bottom: 0.8rem; box-shadow: 0 2px 8px rgba(217,30,60,0.25); }
+.show-card-body h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.6rem; line-height: 1.2; }
+.show-card-body p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+/* YOUTUBE */
+.yt-featured { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.yt-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+.yt-card { border-radius: 10px; overflow: hidden; background: var(--grad-card); border: 1px solid rgba(0,31,91,0.08); box-shadow: var(--shadow-sm); transition: transform 0.22s, border-color 0.22s, box-shadow 0.22s; cursor: pointer; text-decoration: none; display: block; }
+.yt-card:hover { transform: translateY(-4px); border-color: var(--red); box-shadow: var(--shadow-lg); }
+.yt-thumb { position: relative; padding-top: 56.25%; background: #0a0f20; overflow: hidden; }
+.yt-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.yt-card:hover .yt-thumb img { transform: scale(1.05); }
+.yt-play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); transition: background 0.22s; }
+.yt-card:hover .yt-play-btn { background: rgba(217,30,60,0.45); }
+.yt-play-icon { width: 54px; height: 54px; border-radius: 50%; background: var(--grad-red); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(217,30,60,0.5); }
+.yt-play-icon svg { width: 20px; height: 20px; fill: white; margin-left: 3px; }
+.yt-info { padding: 1rem 1.1rem 1.2rem; }
+.yt-info h3 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--text-dark); line-height: 1.35; margin-bottom: 0.5rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.yt-featured .yt-info h3 { font-size: 20px; }
+.yt-meta { display: flex; align-items: center; gap: 10px; font-family: var(--font-cond); font-size: 12px; color: var(--text-muted); }
+.yt-views-badge { background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; }
+.yt-sub-bar { display: flex; align-items: center; justify-content: space-between; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap; gap: 1rem; }
+.yt-sub-text { font-family: var(--font-cond); font-size: 15px; color: rgba(255,255,255,0.45); }
+.yt-sub-text strong { color: rgba(255,255,255,0.8); }
+.yt-loading { color: rgba(255,255,255,0.3); font-family: var(--font-cond); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3rem 0; text-align: center; grid-column: 1/-1; }
+
+/* NEWS */
+#news { background: linear-gradient(160deg,#F4F6FB 0%,#EBF0FF 100%); padding-bottom: 6rem; }
+.news-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem; margin-top: 2.5rem; }
+.news-card { background: var(--grad-card); border: 1px solid rgba(0,31,91,0.07); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); transition: box-shadow 0.22s, transform 0.18s; text-decoration: none; color: inherit; }
+.news-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.news-card-top { padding: 1rem 1.25rem 0; display: flex; align-items: center; justify-content: space-between; }
+.news-source-badge { font-family: var(--font-cond); font-size: 10px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 10px; border-radius: 3px; }
+.badge-fox { background: linear-gradient(135deg,#1a1a2e,#0d0d1f); color: #4FC3F7; }
+.badge-wire { background: linear-gradient(135deg,#1a2e1a,#0d1f0d); color: #81C784; }
+.badge-nyp { background: linear-gradient(135deg,#2e1a1a,#1f0d0d); color: #EF9A9A; }
+.news-card-date { font-family: var(--font-cond); font-size: 11px; color: var(--text-muted); }
+.news-card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--text-dark); line-height: 1.35; padding: 0.75rem 1.25rem 1rem; flex: 1; }
+.news-card-footer { border-top: 1px solid rgba(0,31,91,0.07); padding: 0.65rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+.news-read-more { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.news-arrow { background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 14px; }
+.news-loading { text-align: center; padding: 3rem; color: var(--text-muted); font-family: var(--font-cond); font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; grid-column: 1/-1; }
+.news-tabs { display: flex; gap: 0.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.news-tab { font-family: var(--font-cond); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 20px; border-radius: 4px; border: 1.5px solid rgba(0,31,91,0.12); background: var(--white); color: var(--text-muted); cursor: pointer; transition: all 0.18s; box-shadow: var(--shadow-sm); }
+.news-tab.active, .news-tab:hover { background: var(--grad-blue); color: var(--white); border-color: transparent; box-shadow: var(--shadow-blue); }
+
+/* JOIN BANNER */
+.join-banner { background: var(--grad-red); padding: 4.5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+.join-banner::before { content:''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 100% at 50% 0%,rgba(255,255,255,0.08) 0%,transparent 70%); }
+.join-banner h2 { font-family: var(--font-display); font-size: clamp(28px,4vw,48px); font-weight: 900; color: var(--white); margin-bottom: 0.75rem; text-shadow: 0 3px 16px rgba(0,0,0,0.25); position: relative; }
+.join-banner p { font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; position: relative; }
+.btn-white { background: var(--white); color: var(--red); font-family: var(--font-cond); font-size: 15px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 15px 40px; border-radius: 5px; text-decoration: none; display: inline-block; box-shadow: 0 8px 24px rgba(0,0,0,0.22); transition: box-shadow 0.2s, transform 0.15s; }
+.btn-white:hover { box-shadow: 0 14px 36px rgba(0,0,0,0.3); transform: translateY(-2px); }
+
+/* CONTACT */
+#contact { background: linear-gradient(160deg,#F4F6FB 0%,#EBF0FF 100%); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+.contact-info h3 { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--blue-mid); margin-bottom: 0.75rem; }
+.contact-info p { font-size: 16px; color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem; }
+.contact-item { display: flex; align-items: center; gap: 14px; margin-bottom: 1.1rem; }
+.contact-icon { width: 44px; height: 44px; background: var(--grad-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-blue); }
+.contact-icon svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 2; }
+.contact-item-text { font-size: 15px; color: var(--text-dark); }
+.contact-form { background: linear-gradient(160deg,#fff 0%,#f7f9ff 100%); border-radius: 12px; padding: 2.25rem; border: 1px solid rgba(0,31,91,0.08); box-shadow: var(--shadow-md); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem; }
+.form-group label { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+.form-group input, .form-group select, .form-group textarea { font-family: var(--font-body); font-size: 15px; color: var(--text-dark); background: linear-gradient(135deg,#f8faff 0%,#fff 100%); border: 1.5px solid rgba(0,31,91,0.12); border-radius: 6px; padding: 11px 15px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; resize: vertical; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue-mid); box-shadow: 0 0 0 3px rgba(10,48,128,0.12); }
+.form-group textarea { min-height: 120px; }
+.form-submit { width: 100%; padding: 15px; font-size: 15px; }
+
+/* SOCIAL BAR */
+.social-bar { background: var(--grad-blue); padding: 2.5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+.social-bar p { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
+.social-links { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.social-btn { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 9px 20px; color: var(--white); font-family: var(--font-cond); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.18); transition: background 0.2s, border-color 0.2s, transform 0.15s; }
+.social-btn:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.3); transform: translateY(-2px); }
+
+/* TICKER BAR */
+#ticker-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: linear-gradient(90deg,#050D20 0%,#0A1535 100%); border-top: 2px solid var(--red); height: 40px; display: flex; align-items: center; overflow: hidden; box-shadow: 0 -4px 24px rgba(0,5,20,0.55); }
+.ticker-label { background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 12px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; padding: 0 16px; height: 100%; display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
+.ticker-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.12); flex-shrink: 0; }
+.ticker-track-wrap { flex: 1; overflow: hidden; height: 100%; display: flex; align-items: center; }
+.ticker-track { display: flex; align-items: center; white-space: nowrap; animation: tickerScroll 180s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
+@keyframes tickerScroll { 0%{transform:translateX(0)}100%{transform:translateX(-50%)} }
+.ticker-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 20px; border-right: 1px solid rgba(255,255,255,0.07); font-family: var(--font-cond); font-size: 13px; font-weight: 700; color: var(--white); }
+.ticker-sym { color: rgba(255,255,255,0.44); font-size: 11px; }
+.ticker-change.up { color: #2ECC71; }
+.ticker-change.down { color: #FF4D6D; }
+.ticker-sep { display: inline-block; padding: 0 16px; color: var(--red); font-size: 14px; opacity: 0.6; }
+.ticker-news-item { display: inline-flex; align-items: center; gap: 8px; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.07); font-family: var(--font-cond); font-size: 13px; color: rgba(255,255,255,0.7); }
+.ticker-news-src { font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); flex-shrink: 0; }
+.ticker-news-item a { color: rgba(255,255,255,0.75); text-decoration: none; }
+.ticker-news-item a:hover { color: var(--white); }
+
+/* EPISODE ARCHIVE */
+#archive { background: var(--white); }
+.archive-filters { display: flex; gap: 0.5rem; margin: 1.5rem 0 2rem; flex-wrap: wrap; }
+.archive-filter { font-family: var(--font-cond); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 20px; border-radius: 4px; border: 1.5px solid rgba(0,31,91,0.12); background: var(--white); color: var(--text-muted); cursor: pointer; transition: all 0.18s; box-shadow: var(--shadow-sm); }
+.archive-filter.active, .archive-filter:hover { background: var(--grad-blue); color: var(--white); border-color: transparent; box-shadow: var(--shadow-blue); }
+.archive-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem; }
+.archive-card { background: var(--grad-card); border: 1px solid rgba(0,31,91,0.07); border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm); transition: box-shadow 0.22s, transform 0.18s; display: flex; flex-direction: column; }
+.archive-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.archive-thumb { position: relative; padding-top: 56.25%; background: #0a0f20; overflow: hidden; }
+.archive-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.archive-card:hover .archive-thumb img { transform: scale(1.05); }
+.archive-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); transition: background 0.2s; }
+.archive-card:hover .archive-play { background: rgba(217,30,60,0.4); }
+.archive-play-btn { width: 44px; height: 44px; border-radius: 50%; background: var(--grad-red); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(217,30,60,0.5); }
+.archive-play-btn svg { width: 16px; height: 16px; fill: white; margin-left: 2px; }
+.archive-show-tag { position: absolute; top: 10px; left: 10px; font-family: var(--font-cond); font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 3px; }
+.archive-show-tag.rst { background: linear-gradient(135deg,#E8253F,#A8152D); color: white; }
+.archive-show-tag.brief { background: linear-gradient(135deg,#0A3080,#000E35); color: white; }
+.archive-show-tag.campus { background: linear-gradient(135deg,#1A2744,#060E26); color: white; }
+.archive-info { padding: 1rem 1.25rem 1.25rem; flex: 1; }
+.archive-info h3 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--text-dark); line-height: 1.35; margin-bottom: 0.35rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.archive-meta { font-family: var(--font-cond); font-size: 11px; color: var(--text-muted); letter-spacing: 0.06em; }
+.archive-loading { text-align: center; padding: 3rem; color: var(--text-muted); font-family: var(--font-cond); font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; grid-column: 1/-1; }
+.archive-load-more { display: block; margin: 2rem auto 0; }
+
+/* BLOG */
+#blog { background: linear-gradient(160deg,#F4F6FB 0%,#EBF0FF 100%); }
+.blog-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2rem; margin-top: 2.5rem; }
+.blog-featured { background: var(--grad-card); border: 1px solid rgba(0,31,91,0.08); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: box-shadow 0.25s, transform 0.2s; }
+.blog-featured:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.blog-featured-banner { height: 220px; background: var(--grad-blue); display: flex; align-items: flex-end; padding: 1.5rem; position: relative; overflow: hidden; }
+.blog-featured-banner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 30% 40%, rgba(10,48,128,0.6) 0%, transparent 70%); }
+.blog-featured-cat { font-family: var(--font-cond); font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; background: var(--grad-red); color: white; padding: 3px 10px; border-radius: 3px; position: relative; }
+.blog-featured-body { padding: 1.5rem; }
+.blog-featured-body h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--text-dark); line-height: 1.25; margin-bottom: 0.6rem; }
+.blog-featured-body p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+.blog-featured-meta { font-family: var(--font-cond); font-size: 12px; color: var(--text-muted); letter-spacing: 0.06em; display: flex; align-items: center; gap: 12px; }
+.blog-list { display: flex; flex-direction: column; gap: 1rem; }
+.blog-card { background: var(--grad-card); border: 1px solid rgba(0,31,91,0.07); border-radius: 10px; padding: 1.25rem; box-shadow: var(--shadow-sm); cursor: pointer; transition: box-shadow 0.2s, transform 0.18s; display: flex; flex-direction: column; gap: 0.5rem; }
+.blog-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.blog-card-cat { font-family: var(--font-cond); font-size: 10px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.blog-card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--text-dark); line-height: 1.3; }
+.blog-card-meta { font-family: var(--font-cond); font-size: 11px; color: var(--text-muted); }
+.blog-read-link { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* BLOG MODAL */
+.blog-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,8,40,0.75); z-index: 500; align-items: center; justify-content: center; padding: 2rem; }
+.blog-modal-overlay.open { display: flex; }
+.blog-modal { background: var(--white); border-radius: 14px; max-width: 680px; width: 100%; max-height: 85vh; overflow-y: auto; box-shadow: 0 40px 100px rgba(0,8,40,0.4); }
+.blog-modal-header { background: var(--grad-blue); padding: 2rem 2rem 1.5rem; position: relative; }
+.blog-modal-cat { font-family: var(--font-cond); font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; background: var(--grad-red); color: white; padding: 3px 10px; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem; }
+.blog-modal-header h2 { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--white); line-height: 1.25; }
+.blog-modal-meta { font-family: var(--font-cond); font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 0.5rem; }
+.blog-modal-close { position: absolute; top: 1rem; right: 1rem; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none; cursor: pointer; color: white; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.blog-modal-close:hover { background: rgba(255,255,255,0.2); }
+.blog-modal-body { padding: 2rem; font-size: 16px; color: var(--text-dark); line-height: 1.8; }
+.blog-modal-body p { margin-bottom: 1.2rem; }
+
+/* POLL */
+#poll { background: var(--grad-dark); padding: 5rem 2rem; position: relative; overflow: hidden; }
+#poll::before { content:''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 0%,rgba(10,48,128,0.5) 0%,transparent 70%); }
+#poll .section-inner { position: relative; }
+#poll .section-label { color: var(--gold); -webkit-text-fill-color: var(--gold); background: none; }
+#poll .section-title { color: var(--white); }
+.poll-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; margin-top: 2.5rem; }
+.poll-question { font-family: var(--font-display); font-size: clamp(22px,3vw,34px); font-weight: 700; color: var(--white); line-height: 1.25; margin-bottom: 2rem; }
+.poll-options { display: flex; flex-direction: column; gap: 0.75rem; }
+.poll-option { width: 100%; background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 1rem 1.25rem; cursor: pointer; text-align: left; transition: background 0.2s, border-color 0.2s, transform 0.15s; position: relative; overflow: hidden; }
+.poll-option:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); transform: translateX(4px); }
+.poll-option.voted { cursor: default; transform: none !important; }
+.poll-option-bar { position: absolute; left: 0; top: 0; bottom: 0; background: rgba(217,30,60,0.2); border-radius: 8px; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); }
+.poll-option.winner .poll-option-bar { background: rgba(217,30,60,0.35); }
+.poll-option-content { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.poll-option-text { font-family: var(--font-cond); font-size: 16px; font-weight: 700; letter-spacing: 0.04em; color: var(--white); }
+.poll-option-pct { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--white); opacity: 0; transition: opacity 0.4s; min-width: 48px; text-align: right; }
+.poll-option.voted .poll-option-pct { opacity: 1; }
+.poll-total { font-family: var(--font-cond); font-size: 12px; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-top: 1rem; }
+.poll-stats { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 2rem; }
+.poll-stat { margin-bottom: 1.5rem; }
+.poll-stat:last-child { margin-bottom: 0; }
+.poll-stat-label { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+.poll-stat-value { font-family: var(--font-display); font-size: 32px; font-weight: 900; color: var(--white); line-height: 1; }
+.poll-stat-sub { font-family: var(--font-cond); font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+.poll-share { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+.poll-share-label { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.75rem; }
+.poll-share-btn { display: inline-block; background: var(--grad-red); color: white; font-family: var(--font-cond); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 20px; border-radius: 4px; text-decoration: none; box-shadow: var(--shadow-red); }
+
+/* INSTAGRAM */
+#instagram { background: linear-gradient(135deg, #833AB4 0%, #C13584 40%, #E1306C 70%, #FD1D1D 100%); padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+#instagram::before { content:''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 0%,rgba(255,255,255,0.08) 0%,transparent 70%); }
+#instagram .section-inner { position: relative; }
+.ig-label { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.75rem; }
+.ig-title { font-family: var(--font-display); font-size: clamp(30px,4vw,52px); font-weight: 700; color: var(--white); margin-bottom: 0.75rem; text-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.ig-sub { font-size: 17px; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+.ig-handle { font-family: var(--font-cond); font-size: 22px; font-weight: 800; color: var(--white); letter-spacing: 0.05em; margin-bottom: 2rem; display: block; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+.ig-preview { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.5rem; max-width: 600px; margin: 0 auto 2.5rem; }
+.ig-tile { aspect-ratio: 1; border-radius: 8px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); overflow: hidden; transition: transform 0.2s; }
+.ig-tile:hover { transform: scale(1.05); }
+.ig-tile-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.ig-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--white); color: #C13584; font-family: var(--font-cond); font-size: 16px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 36px; border-radius: 5px; text-decoration: none; box-shadow: 0 8px 28px rgba(0,0,0,0.2); transition: transform 0.15s, box-shadow 0.2s; }
+.ig-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,0,0,0.28); }
+
+/* RESPONSIVE additions */
+@media (max-width: 800px) {
+  #latest-videos-grid { grid-template-columns: 1fr !important; }
+  .archive-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .poll-wrap { grid-template-columns: 1fr; }
+  .ig-preview { grid-template-columns: repeat(4,1fr); }
+}
+
+/* NEWSLETTER */
+#newsletter { background: var(--grad-blue); padding: 5rem 2rem; position: relative; overflow: hidden; }
+#newsletter::before { content:''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 0%,rgba(10,48,128,0.5) 0%,transparent 70%); }
+#newsletter .section-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.newsletter-text .section-label { color: var(--gold); -webkit-text-fill-color: var(--gold); background: none; }
+.newsletter-text h2 { font-family: var(--font-display); font-size: clamp(28px,4vw,46px); font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+.newsletter-text h2 span { background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.newsletter-text p { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 1.5rem; }
+.newsletter-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.newsletter-bullets li { font-family: var(--font-cond); font-size: 14px; font-weight: 700; letter-spacing: 0.05em; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 8px; }
+.newsletter-bullets li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--grad-red); flex-shrink: 0; }
+.newsletter-form-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 2.5rem; backdrop-filter: blur(4px); }
+.newsletter-form-title { font-family: var(--font-cond); font-size: 11px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.newsletter-input-group { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
+.newsletter-input { font-family: var(--font-body); font-size: 15px; color: var(--text-dark); background: var(--white); border: none; border-radius: 6px; padding: 13px 16px; outline: none; transition: box-shadow 0.2s; }
+.newsletter-input:focus { box-shadow: 0 0 0 3px rgba(217,30,60,0.3); }
+.newsletter-submit { width: 100%; padding: 14px; font-size: 15px; border-radius: 6px; }
+.newsletter-note { font-size: 12px; color: rgba(255,255,255,0.35); text-align: center; margin-top: 0.75rem; line-height: 1.5; }
+.newsletter-success { display: none; text-align: center; padding: 2rem; }
+.newsletter-success-icon { font-size: 48px; margin-bottom: 0.75rem; }
+.newsletter-success h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+.newsletter-success p { font-size: 14px; color: rgba(255,255,255,0.6); }
+@media (max-width: 800px) { #newsletter .section-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* COOKIE BANNER */
+#cookie-banner { position: fixed; bottom: 44px; left: 0; right: 0; z-index: 199; background: linear-gradient(90deg,#070F22 0%,#0D1835 100%); border-top: 1px solid rgba(255,255,255,0.08); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; transform: translateY(0); transition: transform 0.4s ease; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); }
+#cookie-banner.hidden { transform: translateY(100%); }
+.cookie-text { font-family: var(--font-cond); font-size: 13px; color: rgba(255,255,255,0.6); letter-spacing: 0.03em; flex: 1; min-width: 260px; line-height: 1.5; }
+.cookie-text a { color: var(--gold); text-decoration: none; }
+.cookie-text a:hover { text-decoration: underline; }
+.cookie-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
+.cookie-accept { background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 20px; border-radius: 4px; border: none; cursor: pointer; box-shadow: var(--shadow-red); transition: box-shadow 0.2s; }
+.cookie-accept:hover { box-shadow: 0 6px 20px rgba(217,30,60,0.5); }
+.cookie-decline { background: transparent; color: rgba(255,255,255,0.4); font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 16px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.12); cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+.cookie-decline:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.25); }
+
+/* FOOTER */
+footer { background: linear-gradient(135deg,#040A18 0%,#070F22 100%); padding: 2.5rem 2rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.04); }
+.footer-logo { font-family: var(--font-cond); font-size: 21px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); margin-bottom: 0.5rem; }
+.footer-logo span { background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+footer p { font-size: 13px; color: rgba(255,255,255,0.25); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+@media (max-width: 800px) {
+  #latest-videos-grid { grid-template-columns: 1fr !important; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .shows-grid, .news-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2,1fr); }
+  .yt-featured, .yt-grid { grid-template-columns: 1fr; }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)} }
+.hero-eyebrow { animation: fadeUp 0.6s ease both; }
+.hero-title { animation: fadeUp 0.6s 0.1s ease both; }
+.hero-subtitle { animation: fadeUp 0.6s 0.2s ease both; }
+.hero-desc { animation: fadeUp 0.6s 0.3s ease both; }
+.hero-btns { animation: fadeUp 0.6s 0.4s ease both; }
+</style>
+</head>
+<body>
+
+<script>
+function toggleMenu() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+  btn.classList.toggle('open');
+  menu.classList.toggle('open');
+}
+function closeMenu() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+  btn.classList.remove('open');
+  menu.classList.remove('open');
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobile-menu');
+  var btn = document.getElementById('hamburger');
+  if (menu && btn && menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+    closeMenu();
+  }
+});
+</script>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#home">Right <span>Side</span> Talks</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#shows">Shows</a></li>
+    <li><a href="#archive">Episodes</a></li>
+    <li><a href="#blog">Right Side Takes</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#newsletter">Newsletter</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="support.html" class="nav-cta">Support Us</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#shows" onclick="closeMenu()">Shows</a></li>
+    <li><a href="#archive" onclick="closeMenu()">Episodes</a></li>
+    <li><a href="#blog" onclick="closeMenu()">Right Side Takes</a></li>
+    <li><a href="#news" onclick="closeMenu()">News</a></li>
+    <li><a href="#newsletter" onclick="closeMenu()">Newsletter</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+  <a href="support.html" class="mobile-menu-cta">Support Us</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-stars"></div>
+  <img src="data:image/jpeg;base64,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UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQMKKKKBBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQMKKKKBBRRRQAUUUUAFFFFABRRRQAUUUUDCiiigQUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoAuUVT/ALV0r/oKaf8A+BUf+NH9q6V/0FNP/wDAqP8AxoA//9k=" alt="Right Side Talks Logo" class="hero-logo" />
+  <div class="hero-stripe-top"></div>
+  <p class="hero-eyebrow">National Youth Conservative Media Organization</p>
+  <h1 class="hero-title">Right <span class="accent">Side</span><br>Talks</h1>
+  <p class="hero-subtitle">Amplifying the Next Generation of Conservative Voices</p>
+  <p class="hero-desc">We are a national youth conservative media organization dedicated to giving young Americans a platform to speak truth, champion freedom, and defend the values that make America great.</p>
+  <div class="hero-btns">
+    <a href="#shows" class="btn-primary">Watch Our Shows</a>
+    <a href="#contact" class="btn-outline">Get Involved</a>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+  <div class="hero-stripe-bottom"></div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div><div class="stat-num" style="font-size:28px;line-height:1.2;">Growing<span> &</span><br>Expanding</div><div class="stat-label">Nationwide</div></div>
+    <div><div class="stat-num">100<span>%</span></div><div class="stat-label">Youth-Led</div></div>
+    <div><div class="stat-num">1776</div><div class="stat-label">Values We Stand On</div></div>
+    <div><div class="stat-num">24<span>/7</span></div><div class="stat-label">Conservative Content</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">The <span class="blue">Voice</span> of Young<br>Conservative America</h2>
+        <p>Right Side Talks LLC is a <strong>national youth conservative media organization</strong> built by young Americans, for young Americans. We believe the next generation deserves a platform that reflects their values&mdash;freedom, faith, family, and country.</p>
+        <p>We create bold, unapologetic content that cuts through the noise of mainstream media and delivers the perspective that too often goes unheard on campuses and in communities across the country.</p>
+        <p>Whether you're a first-time voter or a lifelong patriot, Right Side Talks is your home for authentic conservative media made by people just like you.</p>
+        <a href="#contact" class="btn-primary" style="margin-top:1rem;">Join Our Movement</a>
+      </div>
+      <div class="about-pillars">
+        <div class="pillar"><h3>Freedom of Speech</h3><p>We champion the First Amendment and believe every American has the right to speak their truth without fear of censorship or cancel culture.</p></div>
+        <div class="pillar"><h3>America First</h3><p>We stand proudly for American exceptionalism, our Constitution, and the principles that have made the United States the greatest nation on Earth.</p></div>
+        <div class="pillar"><h3>Youth-Driven</h3><p>Our content is created by young conservatives who understand the challenges and opportunities facing their generation firsthand.</p></div>
+        <div class="pillar"><h3>National Reach</h3><p>From coast to coast, we connect conservative young Americans and amplify their voices in the national conversation.</p></div>
+      </div>
+    </div>
+
+    <!-- MEET THE TEAM -->
+    <div style="margin-top:5rem;">
+      <p class="section-label">The People Behind the Mic</p>
+      <h2 class="section-title">Meet the <span class="blue">Team</span></h2>
+      <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem;">The voices, writers, and producers driving the Right Side Talks movement from coast to coast.</p>
+      <div class="team-grid">
+        <div class="team-card team-placeholder">
+          <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="team-name-placeholder"></div><div class="team-role-placeholder"></div><p class="team-coming-soon">Coming Soon</p>
+        </div>
+        <div class="team-card team-placeholder">
+          <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="team-name-placeholder"></div><div class="team-role-placeholder"></div><p class="team-coming-soon">Coming Soon</p>
+        </div>
+        <div class="team-card team-placeholder">
+          <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="team-name-placeholder"></div><div class="team-role-placeholder"></div><p class="team-coming-soon">Coming Soon</p>
+        </div>
+        <div class="team-card team-placeholder">
+          <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="team-name-placeholder"></div><div class="team-role-placeholder"></div><p class="team-coming-soon">Coming Soon</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWS -->
+<section id="shows">
+  <div class="section-inner">
+    <p class="section-label">Our Content</p>
+    <h2 class="section-title">Shows &amp; <span class="blue">Media</span></h2>
+    <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;">Tune in to our growing lineup of shows, podcasts, and commentary covering politics, culture, and everything in between — from an unapologetically conservative perspective.</p>
+    <div class="shows-grid">
+      <div class="show-card">
+        <div class="show-card-banner red"><div class="show-banner-text">Right Side Talks</div><div class="show-icon">🎙️</div></div>
+        <div class="show-card-body">
+          <span class="show-tag">Flagship Show</span>
+          <h3>Right Side Talks</h3>
+          <p>Our flagship show where young conservatives sit down to break down the biggest stories in politics, culture, and current events. No filters, no apologies — just honest conversation from the right side of the aisle.</p>
+        </div>
+      </div>
+      <div class="show-card">
+        <div class="show-card-banner blue"><div class="show-banner-text">The Brief</div><div class="show-icon">📰</div></div>
+        <div class="show-card-body">
+          <span class="show-tag">News &amp; Analysis</span>
+          <h3>The Brief</h3>
+          <p>Everything you need to know, nothing you don't. The Brief delivers sharp, fast-paced conservative takes on the day's top headlines — cutting through mainstream media spin so you can stay informed and stay sharp.</p>
+        </div>
+      </div>
+      <div class="show-card">
+        <div class="show-card-banner dark"><div class="show-banner-text">Campus Front</div><div class="show-icon">🎓</div></div>
+        <div class="show-card-body">
+          <span class="show-tag">Campus Culture</span>
+          <h3>Campus Front</h3>
+          <p>The battle for free thought is being fought on college campuses every day. Campus Front goes inside America's universities to expose liberal bias, amplify conservative students, and document the fight for intellectual freedom in higher education.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LATEST VIDEOS -->
+    <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(0,31,91,0.08);">
+      <p class="section-label">Latest Episodes</p>
+      <h3 style="font-family:var(--font-display);font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--text-dark);margin-bottom:0.75rem;">Watch <span class="blue">Recent Videos</span></h3>
+      <p style="font-size:16px;color:var(--text-muted);max-width:520px;line-height:1.7;margin-bottom:2rem;">Fresh from our YouTube channel — new content added regularly.</p>
+      <div id="yt-featured" class="yt-featured" style="--yt-bg:#0a0f20;"></div>
+      <div id="yt-grid" class="yt-grid"></div>
+      <div class="yt-sub-bar">
+        <span class="yt-sub-text" style="color:var(--text-muted);">Subscribe to <strong style="color:var(--text-dark);">@RightSideTalks</strong> for new videos every week</span>
+        <a href="https://m.youtube.com/@RightSideTalks" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="#001F5B"/></svg>
+          Subscribe on YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EPISODE ARCHIVE -->
+<section id="archive">
+  <div class="section-inner">
+    <p class="section-label">All Episodes</p>
+    <h2 class="section-title">Episode <span class="blue">Archive</span></h2>
+    <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;">Browse every episode from all three shows. Filter by series or search by topic — all content in one place.</p>
+    <div class="archive-filters">
+      <button class="archive-filter active" onclick="filterArchive('all',this)">All Shows</button>
+      <button class="archive-filter" onclick="filterArchive('rst',this)">Right Side Talks</button>
+      <button class="archive-filter" onclick="filterArchive('brief',this)">The Brief</button>
+      <button class="archive-filter" onclick="filterArchive('campus',this)">Campus Front</button>
+    </div>
+    <div class="archive-grid" id="archive-grid">
+      <div class="archive-loading">Loading episodes&hellip;</div>
+    </div>
+    <button class="btn-primary archive-load-more" id="archive-more" style="display:none" onclick="loadMoreArchive()">Load More Episodes</button>
+  </div>
+</section>
+
+<!-- LATEST VIDEOS -->
+<section id="latest-videos" style="background:linear-gradient(160deg,#F4F6FB 0%,#EBF0FF 100%);padding:5rem 2rem;">
+  <div class="section-inner">
+    <p class="section-label">Fresh Content</p>
+    <h2 class="section-title">Latest <span class="blue">Videos</span></h2>
+    <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem;">Our three most recent uploads — click any video to watch on YouTube.</p>
+    <div id="latest-videos-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted);font-family:var(--font-cond);font-size:14px;letter-spacing:0.1em;text-transform:uppercase;">Loading latest videos&hellip;</div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="https://m.youtube.com/@RightSideTalks" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="#001F5B"/></svg>
+        See All Videos on YouTube
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-inner">
+    <p class="section-label">Right Side Takes</p>
+    <h2 class="section-title">Opinion & <span class="blue">Commentary</span></h2>
+    <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;">Bold opinion pieces from our contributors and columnists. Multiple voices, one mission — the conservative perspective, unfiltered and unapologetic.</p>
+    <div class="blog-grid" id="blog-grid">
+      <!-- FEATURED POST -->
+      <div class="blog-featured" onclick="if(window.openBlog)openBlog(0)">
+        <div class="blog-featured-banner">
+          <span class="blog-featured-cat">Featured</span>
+        </div>
+        <div class="blog-featured-body">
+          <h3>Why Conservative Youth Media Matters More Than Ever</h3>
+          <p>The mainstream media has abandoned an entire generation of young Americans. Here's why Right Side Talks exists — and why the movement is only getting started.</p>
+          <div class="blog-featured-meta">
+            <span>RST Editorial Team</span>
+            <span>&bull;</span>
+            <span>5 min read</span>
+          </div>
+          <div style="margin-top:1rem;"><span class="blog-read-link">Read Full Article →</span></div>
+        </div>
+      </div>
+      <!-- SIDE POSTS -->
+      <div class="blog-list">
+        <div class="blog-card" onclick="if(window.openBlog)openBlog(1)">
+          <span class="blog-card-cat">Politics</span>
+          <h3>The Campus Free Speech Crisis Nobody Is Talking About</h3>
+          <div class="blog-card-meta">RST Contributor &bull; 4 min read</div>
+          <span class="blog-read-link">Read More →</span>
+        </div>
+        <div class="blog-card" onclick="if(window.openBlog)openBlog(2)">
+          <span class="blog-card-cat">Culture</span>
+          <h3>How the Left Lost the Next Generation</h3>
+          <div class="blog-card-meta">RST Contributor &bull; 6 min read</div>
+          <span class="blog-read-link">Read More →</span>
+        </div>
+        <div class="blog-card" onclick="if(window.openBlog)openBlog(3)">
+          <span class="blog-card-cat">America First</span>
+          <h3>Why We Still Believe in American Exceptionalism</h3>
+          <div class="blog-card-meta">RST Contributor &bull; 3 min read</div>
+          <span class="blog-read-link">Read More →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG MODAL -->
+<div class="blog-modal-overlay" id="blog-modal" onclick="closeBlogIfOverlay(event)">
+  <div class="blog-modal">
+    <div class="blog-modal-header">
+      <span class="blog-modal-cat" id="modal-cat">Featured</span>
+      <h2 id="modal-title">Article Title</h2>
+      <div class="blog-modal-meta" id="modal-meta">RST Staff &bull; 5 min read</div>
+      <button class="blog-modal-close" onclick="closeBlog()">&#x2715;</button>
+    </div>
+    <div class="blog-modal-body" id="modal-body">
+      <p>Article content goes here.</p>
+    </div>
+  </div>
+</div>
+
+<!-- POLL -->
+<section id="poll">
+  <div class="section-inner">
+    <p class="section-label">Your Voice</p>
+    <h2 class="section-title" style="color:var(--white);">Right Side <span style="background:var(--grad-red);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Poll</span></h2>
+    <div class="poll-wrap">
+      <div>
+        <p class="poll-question" id="poll-question">Should the federal government defund NPR and PBS?</p>
+        <div class="poll-options" id="poll-options">
+          <button class="poll-option" onclick="castVote(0)">
+            <div class="poll-option-bar" id="bar-0" style="width:0%"></div>
+            <div class="poll-option-content"><span class="poll-option-text">Yes — cut the funding completely</span><span class="poll-option-pct" id="pct-0">0%</span></div>
+          </button>
+          <button class="poll-option" onclick="castVote(1)">
+            <div class="poll-option-bar" id="bar-1" style="width:0%"></div>
+            <div class="poll-option-content"><span class="poll-option-text">No — keep public broadcasting</span><span class="poll-option-pct" id="pct-1">0%</span></div>
+          </button>
+          <button class="poll-option" onclick="castVote(2)">
+            <div class="poll-option-bar" id="bar-2" style="width:0%"></div>
+            <div class="poll-option-content"><span class="poll-option-text">Reform it, don't kill it</span><span class="poll-option-pct" id="pct-2">0%</span></div>
+          </button>
+        </div>
+        <p class="poll-total" id="poll-total">Cast your vote below</p>
+      </div>
+      <div class="poll-stats">
+        <div class="poll-stat">
+          <div class="poll-stat-label">Total Votes</div>
+          <div class="poll-stat-value" id="stat-votes">—</div>
+          <div class="poll-stat-sub">and counting</div>
+        </div>
+        <div class="poll-stat">
+          <div class="poll-stat-label">Leading Answer</div>
+          <div class="poll-stat-value" id="stat-leading" style="font-size:18px;line-height:1.3;">Vote to see results</div>
+        </div>
+        <div class="poll-share">
+          <div class="poll-share-label">Share this poll</div>
+          <a href="https://x.com/intent/tweet?text=I+just+voted+on+the+Right+Side+Talks+poll+%E2%80%94+join+the+conversation!+%40rightsidetalks" target="_blank" class="poll-share-btn">Share on X ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram">
+  <div class="section-inner">
+    <p class="ig-label">Follow Along</p>
+    <h2 class="ig-title">We're on Instagram</h2>
+    <p class="ig-sub">Behind-the-scenes, clips, breaking takes, and more. Join our community of young conservatives standing up for America.</p>
+    <span class="ig-handle">@rightside_talks</span>
+    <div class="ig-preview">
+      <div class="ig-tile"><div class="ig-tile-inner">🇺🇸</div></div>
+      <div class="ig-tile"><div class="ig-tile-inner">🎙️</div></div>
+      <div class="ig-tile"><div class="ig-tile-inner">📣</div></div>
+      <div class="ig-tile"><div class="ig-tile-inner">🦅</div></div>
+    </div>
+    <a href="https://www.instagram.com/rightside_talks/" target="_blank" class="ig-cta">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Follow on Instagram
+    </a>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="section-inner">
+    <p class="section-label">Conservative Headlines</p>
+    <h2 class="section-title">Latest <span class="blue">News</span></h2>
+    <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;">Real-time headlines from trusted conservative outlets. Click any story to read the full article at the source.</p>
+    <div class="news-tabs">
+      <button class="news-tab active" onclick="filterNews('all',this)">All Sources</button>
+      <button class="news-tab" onclick="filterNews('fox',this)">Fox News</button>
+      <button class="news-tab" onclick="filterNews('wire',this)">Daily Wire</button>
+      <button class="news-tab" onclick="filterNews('nyp',this)">NY Post</button>
+    </div>
+    <div class="news-grid" id="news-grid"><div class="news-loading">Loading headlines&hellip;</div></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="section-inner">
+    <div class="newsletter-text">
+      <p class="section-label">Stay in the Loop</p>
+      <h2>Own Your <span>News Feed</span></h2>
+      <p>Social platforms can shadowban you, change their algorithm, or disappear overnight. Your email inbox? That's yours. Join thousands of young conservatives who get Right Side Talks content delivered directly to them — no algorithm, no censorship.</p>
+      <ul class="newsletter-bullets">
+        <li>Weekly conservative news roundup</li>
+        <li>New episode alerts before anyone else</li>
+        <li>Exclusive commentary from our team</li>
+        <li>Behind-the-scenes updates</li>
+        <li>100% free — unsubscribe anytime</li>
+      </ul>
+    </div>
+    <div class="newsletter-form-wrap">
+      <div id="newsletter-form-content">
+        <p class="newsletter-form-title">Join the Movement</p>
+        <div class="newsletter-input-group">
+          <input type="text" class="newsletter-input" id="nl-name" placeholder="Your first name" />
+          <input type="email" class="newsletter-input" id="nl-email" placeholder="Your email address" />
+        </div>
+        <button class="btn-primary newsletter-submit" onclick="submitNewsletter()">Subscribe — It's Free</button>
+        <p class="newsletter-note">We respect your privacy. No spam, ever. Unsubscribe with one click anytime.</p>
+      </div>
+      <div class="newsletter-success" id="newsletter-success">
+        <div class="newsletter-success-icon">🇺🇸</div>
+        <h3>You're In!</h3>
+        <p>Welcome to the movement. Check your inbox for a confirmation email from Right Side Talks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN BANNER -->
+<div class="join-banner">
+  <h2>Ready to Contribute?</h2>
+  <p>We're always looking for passionate young conservatives to write, host, produce, and help grow the movement.</p>
+  <a href="#contact" class="btn-white">Become a Contributor</a>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="section-label">Get In Touch</p>
+        <h3>Join the Right Side</h3>
+        <p>Whether you want to contribute, partner with us, book a guest appearance, or just say hello&mdash;we'd love to hear from you. Right Side Talks is always growing and we want you to be part of it.</p>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <span class="contact-item-text">rightsidetalks [at] gmail [dot] com</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <span class="contact-item-text">United States &mdash; National Organization</span>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div id="form-success" style="display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:6px;padding:1.5rem;text-align:center;margin-bottom:1rem;">
+          <div style="font-size:28px;margin-bottom:0.5rem;">✅</div>
+          <p style="font-family:var(--font-cond);font-size:16px;font-weight:700;color:#2e7d32;text-transform:uppercase;">Message Sent!</p>
+          <p style="font-size:14px;color:#388e3c;margin-top:4px;">We'll get back to you at rightsidetalks [at] gmail [dot] com shortly.</p>
+        </div>
+        <div id="form-error" style="display:none;background:#ffebee;border:1px solid #ef9a9a;border-radius:6px;padding:1rem;margin-bottom:1rem;">
+          <p style="font-family:var(--font-cond);font-size:14px;font-weight:700;color:#c62828;">Something went wrong. Please email us directly at rightsidetalks [at] gmail [dot] com</p>
+        </div>
+        <div id="contact-form-fields">
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" id="f-first" placeholder="John" required /></div>
+            <div class="form-group"><label>Last Name</label><input type="text" id="f-last" placeholder="Adams" required /></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" id="f-email" placeholder="you@example.com" required /></div>
+          <div class="form-group">
+            <label>I'm Interested In</label>
+            <select id="f-interest">
+              <option value="">Select an option...</option>
+              <option>Contributing / Writing</option>
+              <option>Hosting a Show</option>
+              <option>Partnership / Sponsorship</option>
+              <option>Guest Appearance</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message</label><textarea id="f-message" placeholder="Tell us about yourself and how you'd like to get involved..."></textarea></div>
+          <button class="btn-primary form-submit" id="form-btn" onclick="submitContactForm(event)">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<div class="social-bar">
+  <p>Follow &amp; Subscribe</p>
+  <div class="social-links">
+    <a href="https://m.youtube.com/@RightSideTalks" target="_blank" class="social-btn">&#9654; YouTube</a>
+    <a href="https://x.com/rightsidetalks?s=11" target="_blank" class="social-btn">&#120143;&nbsp;X / Twitter</a>
+    <a href="https://www.instagram.com/rightside_talks/" target="_blank" class="social-btn">&#128247; Instagram</a>
+    <a href="https://www.facebook.com/p/Right-Side-Talks-61583993844581/" target="_blank" class="social-btn">&#128100; Facebook</a>
+    <a href="https://www.tiktok.com/@right.side.talks" target="_blank" class="social-btn">&#127925; TikTok</a>
+    <a href="https://open.spotify.com/user/31bl5td6k4w7qjtyrtrt5owxdgai?si=ZBxXm2GdTJy9YmYZ2v1Fbw" target="_blank" class="social-btn">&#127897; Spotify</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Right <span>Side</span> Talks</div>
+  <p>Right Side Talks LLC &mdash; A National Youth Conservative Media Organization</p>
+  <div style="margin-top:1rem;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+    <a href="support.html" style="color:var(--red);font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">Support Us</a>
+    <a href="#about" style="color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">About</a>
+    <a href="#contact" style="color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">Contact</a>
+    <a href="#contact" style="color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">Contact Us</a>
+  </div>
+  <p style="margin-top:1rem;">&copy; 2025 Right Side Talks LLC. All rights reserved.</p>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner">
+  <p class="cookie-text">
+    We use cookies to improve your experience and analyze site traffic. By clicking "Accept," you agree to our use of cookies.
+    <a href="#" onclick="document.getElementById('privacy-modal').style.display='flex';return false;">Privacy Policy</a>
+  </p>
+  <div class="cookie-btns">
+    <button class="cookie-decline" onclick="document.getElementById('cookie-banner').style.display='none';try{localStorage.setItem('rst_cookie','n')}catch(e){}">Decline</button>
+    <button class="cookie-accept" onclick="document.getElementById('cookie-banner').style.display='none';try{localStorage.setItem('rst_cookie','y')}catch(e){}">Accept</button>
+  </div>
+</div>
+
+<!-- PRIVACY MODAL -->
+<div id="privacy-modal" style="display:none;position:fixed;inset:0;background:rgba(0,8,40,0.8);z-index:600;align-items:center;justify-content:center;padding:2rem;">
+  <div style="background:var(--white);border-radius:14px;max-width:580px;width:100%;max-height:80vh;overflow-y:auto;box-shadow:0 40px 100px rgba(0,0,0,0.4);">
+    <div style="background:var(--grad-blue);padding:1.75rem 2rem;border-radius:14px 14px 0 0;display:flex;align-items:center;justify-content:space-between;">
+      <h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--white);">Privacy Policy</h2>
+      <button onclick="closePrivacy()" style="background:rgba(255,255,255,0.1);border:none;border-radius:50%;width:32px;height:32px;color:white;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#x2715;</button>
+    </div>
+    <div style="padding:2rem;font-size:15px;color:var(--text-dark);line-height:1.75;">
+      <p style="margin-bottom:1rem;"><strong>Right Side Talks LLC — Privacy Policy</strong><br>Last updated: 2025</p>
+      <p style="margin-bottom:1rem;"><strong>Information We Collect</strong><br>We collect information you provide directly, such as your name and email address when you submit our contact form or subscribe to our newsletter. We also collect anonymous usage data (pages visited, time on site) to improve your experience.</p>
+      <p style="margin-bottom:1rem;"><strong>How We Use Your Information</strong><br>Your contact information is used only to respond to your inquiries or send newsletters you've opted into. We never sell, rent, or share your personal data with third parties for marketing purposes.</p>
+      <p style="margin-bottom:1rem;"><strong>Cookies</strong><br>We use essential cookies to remember your preferences (such as poll votes and cookie consent). We may use analytics cookies to understand how visitors interact with our site. You may decline non-essential cookies using the banner on our site.</p>
+      <p style="margin-bottom:1rem;"><strong>Third-Party Services</strong><br>Our site integrates with YouTube, Spotify, and social media platforms. These services have their own privacy policies which govern data collected through their embedded features.</p>
+      <p style="margin-bottom:1rem;"><strong>Your Rights</strong><br>You may request access to, correction of, or deletion of your personal data at any time by emailing us at rightsidetalks [at] gmail [dot] com.</p>
+      <p><strong>Contact</strong><br>Right Side Talks LLC &mdash; rightsidetalks [at] gmail [dot] com</p>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER BAR -->
+<div id="ticker-bar">
+  <div class="ticker-label">Markets &amp; News</div>
+  <div class="ticker-divider"></div>
+  <div class="ticker-track-wrap">
+    <div class="ticker-track" id="ticker-track">
+      <span class="ticker-item"><span class="ticker-sym">LOADING</span>&nbsp;...</span>
+    </div>
+  </div>
+</div>
+
+<script>
+// MARKET DATA
+const SYMBOLS = [
+  {sym:'S&P 500',id:'%5EGSPC'},{sym:'DOW',id:'%5EDJI'},{sym:'NASDAQ',id:'%5EIXIC'},
+  {sym:'BTC',id:'BTC-USD'},{sym:'ETH',id:'ETH-USD'},
+  {sym:'AAPL',id:'AAPL'},{sym:'MSFT',id:'MSFT'},{sym:'NVDA',id:'NVDA'},
+  {sym:'AMZN',id:'AMZN'},{sym:'GOOGL',id:'GOOGL'},{sym:'META',id:'META'},
+  {sym:'TSLA',id:'TSLA'},{sym:'JPM',id:'JPM'},{sym:'LLY',id:'LLY'},
+  {sym:'V',id:'V'},{sym:'UNH',id:'UNH'},{sym:'XOM',id:'XOM'},
+  {sym:'MA',id:'MA'},{sym:'JNJ',id:'JNJ'},{sym:'PG',id:'PG'},
+  {sym:'HD',id:'HD'},{sym:'AVGO',id:'AVGO'},{sym:'COST',id:'COST'},{sym:'MRK',id:'MRK'},
+];
+
+async function fetchQuote(s) {
+  try {
+    const r = await fetch(`/api/markets?symbol=${s.id}`, {signal: AbortSignal.timeout(8000)});
+    if(!r.ok) return null;
+    const d = await r.json();
+    if(!d.price) return null;
+    return {sym: s.sym, price: d.price, change: d.change, pct: d.pct};
+  } catch(e) { return null; }
+}
+
+function fmtPrice(p, sym) {
+  if(sym === 'BTC' || sym === 'ETH') return '$' + Math.round(p).toLocaleString('en-US');
+  if(p > 10000) return p.toLocaleString('en-US',{maximumFractionDigits:0});
+  return p.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:2});
+}
+
+async function buildMarketItems() {
+  const results = await Promise.allSettled(SYMBOLS.map(fetchQuote));
+  const valid = results.filter(r => r.status==='fulfilled' && r.value).map(r => r.value);
+  if(!valid.length) return '<span class="ticker-item"><span style="color:rgba(255,255,255,0.5)">Market data temporarily unavailable</span></span>';
+  return valid.map(q => {
+    const up = q.change >= 0;
+    return `<span class="ticker-item"><span class="ticker-sym">${q.sym}</span>&nbsp;<span>${fmtPrice(q.price,q.sym)}</span>&nbsp;<span class="ticker-change ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(q.pct).toFixed(2)}%</span></span>`;
+  }).join('<span class="ticker-sep">|</span>');
+}
+
+// NEWS FEEDS
+let allArticles = [];
+
+async function fetchAllNews() {
+  try {
+    const r = await fetch('/api/news', {signal: AbortSignal.timeout(12000)});
+    if(!r.ok) return [];
+    const d = await r.json();
+    return (d.items || []).map(i => ({
+      id: i.id, label: i.label, badge: i.badge,
+      title: i.title, link: i.link, date: new Date(i.date)
+    }));
+  } catch(e) { return []; }
+}
+
+
+
+function fmtDate(d) {
+  const diff = Math.floor((new Date() - d) / 60000);
+  if(diff < 60) return diff + 'm ago';
+  if(diff < 1440) return Math.floor(diff/60) + 'h ago';
+  return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+}
+
+function renderNews(filter) {
+  const grid = document.getElementById('news-grid');
+  const items = filter === 'all' ? allArticles : allArticles.filter(a => a.id === filter);
+  if(!items.length) { grid.innerHTML = '<div class="news-loading">No headlines found.</div>'; return; }
+  grid.innerHTML = items.slice(0,9).map(a => `
+    <a class="news-card" href="${a.link}" target="_blank" rel="noopener">
+      <div class="news-card-top"><span class="news-source-badge ${a.badge}">${a.label}</span><span class="news-card-date">${fmtDate(a.date)}</span></div>
+      <h3>${a.title}</h3>
+      <div class="news-card-footer"><span class="news-read-more">Read Full Story</span><span class="news-arrow">→</span></div>
+    </a>`).join('');
+}
+
+window.filterNews = function(filter, btn) {
+  document.querySelectorAll('.news-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderNews(filter);
+};
+
+async function buildNewsTickerItems() {
+  return allArticles.slice(0,12).map(a =>
+    `<span class="ticker-news-item"><span class="ticker-news-src">${a.label}</span><a href="${a.link}" target="_blank" rel="noopener">${a.title}</a></span>`
+  ).join('');
+}
+
+// YOUTUBE
+async function fetchYTByHandle() {
+  try {
+    const r = await fetch('/api/youtube', {signal: AbortSignal.timeout(12000)});
+    if(!r.ok) return [];
+    const d = await r.json();
+    return d.items || [];
+  } catch(e) { return []; }
+}
+
+async function fetchYouTubeVideos() {
+  try {
+    const r = await fetch(RSS_API + encodeURIComponent('https://www.youtube.com/feeds/videos.xml?user=RightSideTalks') + '&count=7&api_key=ac2p6lozcdlgcsb98uv9ofuzuudcqtec15cm7vcx');
+    return (await r.json()).items || [];
+  } catch(e) { return []; }
+}
+
+function ytVideoId(link) {
+  const m = link.match(/[?&]v=([^&]+)/) || link.match(/youtu\.be\/([^?]+)/) || link.match(/\/shorts\/([^?]+)/);
+  return m ? m[1] : null;
+}
+
+function fmtAgo(dateStr) {
+  const diff = Math.floor((new Date() - new Date(dateStr)) / 86400000);
+  if(diff === 0) return 'Today';
+  if(diff === 1) return 'Yesterday';
+  if(diff < 7) return diff + ' days ago';
+  if(diff < 30) return Math.floor(diff/7) + ' weeks ago';
+  if(diff < 365) return Math.floor(diff/30) + ' months ago';
+  return Math.floor(diff/365) + ' years ago';
+}
+
+function renderYTCard(item, featured) {
+  const vid = ytVideoId(item.link);
+  const thumb = vid ? `https://i.ytimg.com/vi/${vid}/${featured?'maxresdefault':'hqdefault'}.jpg` : '';
+  return `<a class="yt-card" href="${item.link}" target="_blank" rel="noopener">
+    <div class="yt-thumb">
+      <img src="${thumb}" alt="${item.title}" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/default/hqdefault.jpg'"/>
+      <div class="yt-play-btn"><div class="yt-play-icon"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+    </div>
+    <div class="yt-info">
+      <h3>${item.title}</h3>
+      <div class="yt-meta"><span class="yt-views-badge">New</span><span>${fmtAgo(item.pubDate)}</span></div>
+    </div>
+  </a>`;
+}
+
+async function loadYouTubeVideos() {
+  const featuredEl = document.getElementById('yt-featured');
+  const gridEl = document.getElementById('yt-grid');
+  featuredEl.innerHTML = '<div class="yt-loading" style="grid-column:1/-1">Loading videos&hellip;</div>';
+  let videos = await fetchYTByHandle();
+  if(!videos.length) videos = await fetchYouTubeVideos();
+  if(!videos.length) {
+    featuredEl.innerHTML = '';
+    gridEl.innerHTML = `<div class="yt-loading">Videos temporarily unavailable. <a href="https://m.youtube.com/@RightSideTalks" target="_blank" style="color:var(--red)">Visit our channel →</a></div>`;
+    return;
+  }
+  const [first, second, ...rest] = videos;
+  featuredEl.innerHTML = renderYTCard(first, true) + (second ? renderYTCard(second, false) : '');
+  gridEl.innerHTML = rest.slice(0,3).map(v => renderYTCard(v, false)).join('');
+}
+
+// CONTACT FORM
+const FORMSPREE_ID = 'xeerdbaw';
+window.submitContactForm = async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('form-btn');
+  const first = document.getElementById('f-first').value.trim();
+  const last = document.getElementById('f-last').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const interest = document.getElementById('f-interest').value;
+  const message = document.getElementById('f-message').value.trim();
+  if(!first || !email || !message) { alert('Please fill in your name, email, and message.'); return; }
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({name:`${first} ${last}`,email,interest:interest||'Not specified',message,_subject:`Right Side Talks — ${interest||'New Message'} from ${first} ${last}`})
+    });
+    if(res.ok) {
+      document.getElementById('form-success').style.display = 'block';
+      document.getElementById('contact-form-fields').style.display = 'none';
+    } else { throw new Error(); }
+  } catch(err) {
+    document.getElementById('form-error').style.display = 'block';
+    btn.textContent = 'Send Message'; btn.disabled = false;
+  }
+};
+
+// EPISODE ARCHIVE
+let allArchiveVideos = [];
+let archiveVisible = 9;
+let archiveFilter = 'all';
+
+const SHOW_TAGS = [
+  { key: 'rst', label: 'Right Side Talks', keywords: ['right side talks','rst','politics','conservative'] },
+  { key: 'brief', label: 'The Brief', keywords: ['brief','news','update','daily'] },
+  { key: 'campus', label: 'Campus Front', keywords: ['campus','college','university','student'] },
+];
+
+function detectShow(title) {
+  const t = (title || '').toLowerCase();
+  for(const s of SHOW_TAGS) {
+    if(s.keywords.some(k => t.includes(k))) return s.key;
+  }
+  return 'rst';
+}
+
+function renderArchiveCard(item) {
+  const vid = ytVideoId(item.link);
+  const thumb = vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : '';
+  const show = detectShow(item.title);
+  const tagLabels = {rst:'Right Side Talks', brief:'The Brief', campus:'Campus Front'};
+  return `<a class="archive-card" href="${item.link}" target="_blank" rel="noopener" data-show="${show}">
+    <div class="archive-thumb">
+      <img src="${thumb}" alt="${item.title}" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/default/hqdefault.jpg'"/>
+      <div class="archive-play"><div class="archive-play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+      <span class="archive-show-tag ${show}">${tagLabels[show]}</span>
+    </div>
+    <div class="archive-info">
+      <h3>${item.title}</h3>
+      <div class="archive-meta">${fmtAgo(item.pubDate)}</div>
+    </div>
+  </a>`;
+}
+
+function renderArchive() {
+  const grid = document.getElementById('archive-grid');
+  const moreBtn = document.getElementById('archive-more');
+  const filtered = archiveFilter === 'all' ? allArchiveVideos : allArchiveVideos.filter(v => detectShow(v.title) === archiveFilter);
+  if(!filtered.length) { grid.innerHTML = '<div class="archive-loading">No episodes found.</div>'; moreBtn.style.display='none'; return; }
+  const visible = filtered.slice(0, archiveVisible);
+  grid.innerHTML = visible.map(renderArchiveCard).join('');
+  moreBtn.style.display = filtered.length > archiveVisible ? 'block' : 'none';
+}
+
+window.filterArchive = function(filter, btn) {
+  archiveFilter = filter;
+  archiveVisible = 9;
+  document.querySelectorAll('.archive-filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderArchive();
+};
+
+window.loadMoreArchive = function() {
+  archiveVisible += 9;
+  renderArchive();
+};
+
+async function loadArchive() {
+  const grid = document.getElementById('archive-grid');
+  let videos = await fetchYTByHandle();
+  if(!videos.length) videos = await fetchYouTubeVideos();
+  if(!videos.length) {
+    grid.innerHTML = '<div class="archive-loading">Episodes temporarily unavailable. <a href="https://m.youtube.com/@RightSideTalks" target="_blank" style="color:var(--red)">Visit our channel →</a></div>';
+    return;
+  }
+  allArchiveVideos = videos;
+  renderArchive();
+}
+
+async function loadLatestVideos() {
+  const grid = document.getElementById('latest-videos-grid');
+  let videos = await fetchYTByHandle();
+  if(!videos.length) videos = await fetchYouTubeVideos();
+  if(!videos.length) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted);font-family:var(--font-cond);font-size:14px;letter-spacing:0.1em;text-transform:uppercase;">Videos temporarily unavailable. <a href="https://m.youtube.com/@RightSideTalks" target="_blank" style="color:var(--red)">Visit our channel →</a></div>';
+    return;
+  }
+  const latest = videos.slice(0, 3);
+  grid.innerHTML = latest.map(item => {
+    const vid = ytVideoId(item.link);
+    const thumb = vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : '';
+    return `<a href="${item.link}" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit;background:var(--grad-card);border:1px solid rgba(0,31,91,0.08);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow 0.25s,transform 0.2s;" onmouseover="this.style.boxShadow='0 20px 60px rgba(0,20,80,0.2)';this.style.transform='translateY(-5px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,20,80,0.08)';this.style.transform='translateY(0)'">
+      <div style="position:relative;padding-top:56.25%;background:#0a0f20;overflow:hidden;">
+        <img src="${thumb}" alt="${item.title}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" onerror="this.src='https://i.ytimg.com/vi/default/hqdefault.jpg'"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
+          <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#E8253F 0%,#A8152D 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(217,30,60,0.5);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white" style="margin-left:4px;"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+        <div style="position:absolute;top:10px;right:10px;background:var(--grad-red);color:white;font-family:var(--font-cond);font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:3px;">New</div>
+      </div>
+      <div style="padding:1.25rem 1.5rem 1.5rem;">
+        <h3 style="font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--text-dark);line-height:1.35;margin-bottom:0.5rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">${item.title}</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-family:var(--font-cond);font-size:12px;color:var(--text-muted);">${fmtAgo(item.pubDate)}</span>
+          <span style="font-family:var(--font-cond);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--grad-red);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Watch on YouTube →</span>
+        </div>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+
+const BLOG_POSTS = [
+  {
+    cat: 'Featured',
+    title: 'Why Conservative Youth Media Matters More Than Ever',
+    meta: 'Right Side Talks Staff &bull; 5 min read',
+    body: `<p>America is at a crossroads. The mainstream media — once a pillar of objective journalism — has abandoned an entire generation of young Americans. What used to be the evening news is now a platform for left-wing ideology, corporate narratives, and cancel culture enforcement.</p>
+<p>That's exactly why Right Side Talks exists.</p>
+<p>We started this organization because we saw a void. Millions of young conservatives across this country — on campuses, in communities, in high schools and colleges — had no voice. No platform. No one speaking their language or representing their values in the media landscape.</p>
+<p>We're changing that. One episode at a time. One conversation at a time. One young American at a time.</p>
+<p>The left has dominated youth media for decades. TikTok, YouTube, podcasts — they've flooded every channel with progressive messaging designed to reshape how young people think about their country, their faith, and their future. And for too long, conservatives let it happen.</p>
+<p>Not anymore. Right Side Talks is part of a national movement of young conservatives who are done sitting on the sidelines. We're taking the conversation back — unapologetically, fearlessly, and with the facts on our side.</p>
+<p>If you believe in free speech, individual liberty, America first, and the values that built this nation — this is your home. Welcome to the right side.</p>`
+  },
+  {
+    cat: 'Politics',
+    title: 'The Campus Free Speech Crisis Nobody Is Talking About',
+    meta: 'RST Staff &bull; 4 min read',
+    body: `<p>Walk onto almost any college campus in America today and try to express a conservative opinion. See what happens. You'll be shouted down, reported to the administration, or quietly blacklisted from opportunities that should be open to everyone.</p>
+<p>This isn't hypothetical. It's happening every day to conservative students at universities across the country — and the mainstream media barely covers it.</p>
+<p>Campus Front, our show dedicated to higher education, has documented case after case of conservative students being silenced, penalized for their views, or abandoned by institutions that claim to champion "diversity and inclusion" — so long as that diversity doesn't include different ideas.</p>
+<p>The First Amendment doesn't stop applying at the campus gate. Every student — liberal or conservative — deserves the right to speak freely, debate openly, and pursue truth without fear. We'll keep fighting for that right until it's a reality on every campus in America.</p>`
+  },
+  {
+    cat: 'Culture',
+    title: 'How the Left Lost the Next Generation',
+    meta: 'RST Staff &bull; 6 min read',
+    body: `<p>Something unexpected is happening in America. The generation that was supposed to be the most progressive in history is turning right — and the left has no idea how to stop it.</p>
+<p>Poll after poll shows young men in particular are abandoning the Democratic Party in record numbers. Young women are following. The shift is seismic, and it's accelerating.</p>
+<p>Why? Because the left overplayed its hand. When your political movement tells young Americans that their country is systemically evil, that their values are bigotry, and that their biology is a social construct — you lose people. Real people. People who love their country, love their families, and want a future worth building.</p>
+<p>Conservative media — including organizations like Right Side Talks — has filled the void left by a progressive movement that forgot to actually listen to young Americans. We talk about real issues. Economic freedom. National security. The cost of living. The right to speak your mind.</p>
+<p>The next generation isn't lost to the left. They're finding their way home — to the right side.</p>`
+  },
+  {
+    cat: 'America First',
+    title: 'Why We Still Believe in American Exceptionalism',
+    meta: 'RST Staff &bull; 3 min read',
+    body: `<p>They told us to be ashamed of our country. They rewrote our history. They tore down our monuments and said the American story was one of shame, not triumph.</p>
+<p>We reject that — completely and without apology.</p>
+<p>American exceptionalism is not a myth. It is the documented reality of a nation that, in less than 250 years, became the greatest force for freedom, prosperity, and human dignity the world has ever seen. A nation that freed a continent from fascism. A nation that put a man on the moon. A nation where the son of an immigrant can become President.</p>
+<p>Is America perfect? No. No nation is. But the American experiment — built on individual liberty, limited government, and the rule of law — remains humanity's best answer to the question of how free people should govern themselves.</p>
+<p>We believe that. We say it loudly. And we'll keep saying it on every platform we have.</p>`
+  }
+];
+
+window.openBlog = function(idx) {
+  const post = BLOG_POSTS[idx];
+  document.getElementById('modal-cat').textContent = post.cat;
+  document.getElementById('modal-title').textContent = post.title;
+  document.getElementById('modal-meta').innerHTML = post.meta;
+  document.getElementById('modal-body').innerHTML = post.body;
+  document.getElementById('blog-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeBlog = function() {
+  document.getElementById('blog-modal').classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+window.closeBlogIfOverlay = function(e) {
+  if(e.target === document.getElementById('blog-modal')) closeBlog();
+};
+
+// POLL
+const POLL_KEY = 'rst_poll_voted_v1';
+let pollVotes = [1243, 387, 521];
+
+function updatePoll(votedIdx) {
+  const total = pollVotes.reduce((a,b) => a+b, 0);
+  const maxV = Math.max(...pollVotes);
+  pollVotes.forEach((v, i) => {
+    const pct = Math.round((v / total) * 100);
+    document.getElementById('bar-' + i).style.width = pct + '%';
+    document.getElementById('pct-' + i).textContent = pct + '%';
+    const opt = document.querySelectorAll('.poll-option')[i];
+    opt.classList.add('voted');
+    opt.disabled = true;
+    if(v === maxV) opt.classList.add('winner');
+  });
+  document.getElementById('stat-votes').textContent = total.toLocaleString();
+  const winnerIdx = pollVotes.indexOf(maxV);
+  const opts = ['Yes — cut funding', 'No — keep broadcasting', 'Reform it'];
+  document.getElementById('stat-leading').textContent = opts[winnerIdx];
+  document.getElementById('poll-total').textContent = total.toLocaleString() + ' votes cast';
+}
+
+window.castVote = function(idx) {
+  if(localStorage.getItem(POLL_KEY)) return;
+  pollVotes[idx]++;
+  localStorage.setItem(POLL_KEY, idx);
+  updatePoll(idx);
+};
+
+function initPoll() {
+  const voted = localStorage.getItem(POLL_KEY);
+  if(voted !== null) updatePoll(parseInt(voted));
+}
+
+// NEWSLETTER
+window.submitNewsletter = async function() {
+  const name = document.getElementById('nl-name').value.trim();
+  const email = document.getElementById('nl-email').value.trim();
+  if(!name || !email) { alert('Please enter your name and email.'); return; }
+  if(!/\S+@\S+\.\S+/.test(email)) { alert('Please enter a valid email address.'); return; }
+  const btn = document.querySelector('.newsletter-submit');
+  btn.textContent = 'Subscribing...'; btn.disabled = true;
+  try {
+    // Sends via Formspree same endpoint — tagged as newsletter signup
+    const res = await fetch('https://formspree.io/f/xeerdbaw', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({ name, email, _subject: `Newsletter Signup: ${name}`, type: 'Newsletter Signup' })
+    });
+    if(res.ok) {
+      document.getElementById('newsletter-form-content').style.display = 'none';
+      document.getElementById('newsletter-success').style.display = 'block';
+    } else { throw new Error(); }
+  } catch(e) {
+    alert('Something went wrong. Please email us at our team to subscribe.');
+    btn.textContent = 'Subscribe — It\'s Free'; btn.disabled = false;
+  }
+};
+
+// COOKIE BANNER
+window.dismissCookie = function(accepted) {
+  try { localStorage.setItem('rst_cookie_consent', accepted ? 'accepted' : 'declined');
+  } catch(e) {}
+  document.getElementById('cookie-banner').style.display = 'none';
+};
+
+function closePrivacy() {
+  document.getElementById('privacy-modal').style.display = 'none';
+}
+
+// PAGE INIT
+(async function init() {
+  // Cookie banner
+  try {
+    if(localStorage.getItem('rst_cookie_consent')) {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  } catch(e) {}
+
+  initPoll();
+
+  // Build ticker
+  const tickerTrack = document.getElementById('ticker-track');
+  const [marketItems, newsItems] = await Promise.all([
+    buildMarketItems(),
+    (async () => {
+      allArticles = await fetchAllNews();
+      renderNews('all');
+      return buildNewsTickerItems();
+    })()
+  ]);
+  const combined = marketItems + '<span class="ticker-sep">★</span>' + newsItems;
+  tickerTrack.innerHTML = combined + combined;
+
+  // Load YouTube content
+  await Promise.all([
+    loadYouTubeVideos(),
+    loadArchive(),
+    loadLatestVideos()
+  ]);
+})();
+</script>
+</body>
+</html>
