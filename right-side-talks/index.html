@@ -1076,19 +1076,32 @@ async function buildNewsTickerItems() {
 
 // YOUTUBE
 async function fetchYTByHandle() {
-  try {
-    const r = await fetch('/api/youtube', {signal: AbortSignal.timeout(12000)});
-    if(!r.ok) return [];
-    const d = await r.json();
-    return d.items || [];
-  } catch(e) { return []; }
+  const CHANNEL_ID = 'UCnSYA_NBsCrIpMFmJBKFQpA';
+  const RSS_URL = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + CHANNEL_ID;
+  const apis = [
+    'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS_URL) + '&count=10&api_key=ac2p6lozcdlgcsb98uv9ofuzuudcqtec15cm7vcx',
+    'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS_URL) + '&count=10',
+  ];
+  for(const api of apis) {
+    try {
+      const r = await fetch(api, {signal: AbortSignal.timeout(10000)});
+      if(!r.ok) continue;
+      const d = await r.json();
+      if(d.items && d.items.length) {
+        return d.items.map(i => ({
+          title: i.title,
+          link: i.link,
+          pubDate: i.pubDate,
+          videoId: i.link ? (i.link.match(/[?&]v=([^&]+)/) || [])[1] : null
+        }));
+      }
+    } catch(e) { continue; }
+  }
+  return [];
 }
 
 async function fetchYouTubeVideos() {
-  try {
-    const r = await fetch(RSS_API + encodeURIComponent('https://www.youtube.com/feeds/videos.xml?user=RightSideTalks') + '&count=7&api_key=ac2p6lozcdlgcsb98uv9ofuzuudcqtec15cm7vcx');
-    return (await r.json()).items || [];
-  } catch(e) { return []; }
+  return [];
 }
 
 function ytVideoId(link) {
