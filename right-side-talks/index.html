@@ -1076,46 +1076,12 @@ async function buildNewsTickerItems() {
 
 // YOUTUBE
 async function fetchYTByHandle() {
-  const CHANNEL_ID = 'UCpbgusSKZhNJphR0HOHPJ0Q';
-  const RSS_URL = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + CHANNEL_ID;
-  const proxies = [
-    'https://api.allorigins.win/get?url=' + encodeURIComponent(RSS_URL),
-    'https://corsproxy.io/?' + encodeURIComponent(RSS_URL),
-  ];
-  for(const proxy of proxies) {
-    try {
-      const r = await fetch(proxy, {signal: AbortSignal.timeout(10000)});
-      if(!r.ok) continue;
-      let xml = '';
-      if(proxy.includes('allorigins')) {
-        const d = await r.json();
-        xml = d.contents || '';
-      } else {
-        xml = await r.text();
-      }
-      if(!xml || !xml.includes('<entry>')) continue;
-      const entries = [];
-      const entryRegex = /<entry>([\s\S]*?)<\/entry>/g;
-      let match;
-      while((match = entryRegex.exec(xml)) !== null && entries.length < 10) {
-        const entry = match[1];
-        const titleMatch = entry.match(/<title>([\s\S]*?)<\/title>/);
-        const linkMatch = entry.match(/<link[^>]+href="([^"]+)"/);
-        const publishedMatch = entry.match(/<published>([\s\S]*?)<\/published>/);
-        const videoIdMatch = entry.match(/<yt:videoId>([\s\S]*?)<\/yt:videoId>/);
-        if(titleMatch && linkMatch) {
-          entries.push({
-            title: titleMatch[1].replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim(),
-            link: linkMatch[1],
-            pubDate: publishedMatch ? publishedMatch[1] : new Date().toISOString(),
-            videoId: videoIdMatch ? videoIdMatch[1] : null
-          });
-        }
-      }
-      if(entries.length) return entries;
-    } catch(e) { continue; }
-  }
-  return [];
+  try {
+    const r = await fetch('/api/youtube', {signal: AbortSignal.timeout(12000)});
+    if(!r.ok) return [];
+    const d = await r.json();
+    return d.items || [];
+  } catch(e) { return []; }
 }
 
 async function fetchYouTubeVideos() {
