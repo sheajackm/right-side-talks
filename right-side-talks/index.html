@@ -496,7 +496,7 @@ document.addEventListener('click', function(e) {
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#shows">Shows</a></li>
-    <li><a href="#archive">Episodes</a></li>
+    <li><a href="episodes.html">Episodes</a></li>
     <li><a href="#blog">Right Side Takes</a></li>
     <li><a href="#news">News</a></li>
     <li><a href="#newsletter">Newsletter</a></li>
@@ -514,7 +514,7 @@ document.addEventListener('click', function(e) {
     <li><a href="#home" onclick="closeMenu()">Home</a></li>
     <li><a href="#about" onclick="closeMenu()">About</a></li>
     <li><a href="#shows" onclick="closeMenu()">Shows</a></li>
-    <li><a href="#archive" onclick="closeMenu()">Episodes</a></li>
+    <li><a href="episodes.html" onclick="closeMenu()">Episodes</a></li>
     <li><a href="#blog" onclick="closeMenu()">Right Side Takes</a></li>
     <li><a href="#news" onclick="closeMenu()">News</a></li>
     <li><a href="#newsletter" onclick="closeMenu()">Newsletter</a></li>
@@ -633,25 +633,6 @@ document.addEventListener('click', function(e) {
   </div>
 </section>
 
-<!-- EPISODE ARCHIVE -->
-<section id="archive">
-  <div class="section-inner">
-    <p class="section-label">All Episodes</p>
-    <h2 class="section-title">Episode <span class="blue">Archive</span></h2>
-    <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;">Browse every episode from all three shows. Filter by series or search by topic — all content in one place.</p>
-    <div class="archive-filters">
-      <button class="archive-filter active" onclick="filterArchive('all',this)">All Shows</button>
-      <button class="archive-filter" onclick="filterArchive('rst',this)">Right Side Talks</button>
-      <button class="archive-filter" onclick="filterArchive('brief',this)">The Brief</button>
-      <button class="archive-filter" onclick="filterArchive('campus',this)">Campus Front</button>
-    </div>
-    <div class="archive-grid" id="archive-grid">
-      <div class="archive-loading">Loading episodes&hellip;</div>
-    </div>
-    <button class="btn-primary archive-load-more" id="archive-more" style="display:none" onclick="loadMoreArchive()">Load More Episodes</button>
-  </div>
-</section>
-
 <!-- LATEST VIDEOS -->
 <section id="latest-videos" style="background:linear-gradient(160deg,#F4F6FB 0%,#EBF0FF 100%);padding:5rem 2rem;">
   <div class="section-inner">
@@ -662,7 +643,7 @@ document.addEventListener('click', function(e) {
       <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted);font-family:var(--font-cond);font-size:14px;letter-spacing:0.1em;text-transform:uppercase;">Loading latest videos&hellip;</div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(0,31,91,0.08);flex-wrap:wrap;gap:1rem;">
-      <span style="font-family:var(--font-cond);font-size:15px;color:var(--text-muted);">Subscribe to <strong style="color:var(--text-dark);">@RightSideTalks</strong> for new videos every week</span>
+      <a href="episodes.html" style="font-family:var(--font-cond);font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--grad-blue);color:var(--white);padding:12px 24px;border-radius:5px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:var(--shadow-blue);">Browse All Episodes →</a>
       <a href="https://m.youtube.com/@RightSideTalks" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="#001F5B"/></svg>
         Subscribe on YouTube
@@ -891,7 +872,7 @@ document.addEventListener('click', function(e) {
         <p>Whether you want to contribute, partner with us, book a guest appearance, or just say hello&mdash;we'd love to hear from you. Right Side Talks is always growing and we want you to be part of it.</p>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <span class="contact-item-text"><a href="mailto:Rightsidetalks@gmail.com" style="color:var(--text-dark);text-decoration:none;border-bottom:1px solid rgba(0,31,91,0.2);">Rightsidetalks@gmail.com</a></span>
+          <span class="contact-item-text"><a href="/cdn-cgi/l/email-protection#d88ab1bfb0acabb1bcbdacb9b4b3ab98bfb5b9b1b4f6bbb7b5" style="color:var(--text-dark);text-decoration:none;border-bottom:1px solid rgba(0,31,91,0.2);"><span class="__cf_email__" data-cfemail="52003b353a26213b363726333e392112353f333b3e7c313d3f">[email&#160;protected]</span></a></span>
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -1000,7 +981,7 @@ document.addEventListener('click', function(e) {
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // MARKET DATA
 const SYMBOLS = [
   {sym:'S&P 500',id:'%5EGSPC'},{sym:'DOW',id:'%5EDJI'},{sym:'NASDAQ',id:'%5EIXIC'},
@@ -1436,15 +1417,4 @@ function closePrivacy() {
       return buildNewsTickerItems();
     })()
   ]);
-  const combined = marketItems + '<span class="ticker-sep">★</span>' + newsItems;
-  tickerTrack.innerHTML = combined + combined;
-
-  // Load YouTube content
-  await Promise.all([
-    loadArchive(),
-    loadLatestVideos()
-  ]);
-})();
-</script>
-</body>
-</html>
+  const
