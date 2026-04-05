@@ -86,7 +86,7 @@
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); color: var(--text-dark); background: var(--white); line-height: 1.6; padding-bottom: 40px; }
+body { font-family: var(--font-body); color: var(--text-dark); background: var(--white); line-height: 1.6; padding-bottom: 52px; -webkit-font-smoothing: antialiased; }
 
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: linear-gradient(90deg, #001040 0%, #001F5B 60%, #0A2870 100%); border-bottom: 2px solid var(--red); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 68px; box-shadow: 0 4px 28px rgba(0,8,40,0.55); }
@@ -272,20 +272,20 @@ section { padding: 5rem 2rem; }
 .social-btn:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.3); transform: translateY(-2px); }
 
 /* TICKER BAR */
-#ticker-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: linear-gradient(90deg,#050D20 0%,#0A1535 100%); border-top: 2px solid var(--red); height: 40px; display: flex; align-items: center; overflow: hidden; box-shadow: 0 -4px 24px rgba(0,5,20,0.55); }
-.ticker-label { background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 12px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; padding: 0 16px; height: 100%; display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
+#ticker-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: linear-gradient(90deg,#050D20 0%,#0A1535 100%); border-top: 2px solid var(--red); height: 52px; display: flex; align-items: center; overflow: hidden; box-shadow: 0 -4px 24px rgba(0,5,20,0.55); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.ticker-label { background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 14px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; padding: 0 20px; height: 100%; display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
 .ticker-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.12); flex-shrink: 0; }
 .ticker-track-wrap { flex: 1; overflow: hidden; height: 100%; display: flex; align-items: center; }
 .ticker-track { display: flex; align-items: center; white-space: nowrap; animation: tickerScroll 320s linear infinite; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .ticker-track:hover { animation-play-state: paused; }
 @keyframes tickerScroll { 0%{transform:translateX(0) translateZ(0)}100%{transform:translateX(-50%) translateZ(0)} }
-.ticker-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 20px; border-right: 1px solid rgba(255,255,255,0.07); font-family: var(--font-cond); font-size: 13px; font-weight: 700; color: var(--white); }
-.ticker-sym { color: rgba(255,255,255,0.44); font-size: 11px; }
+.ticker-item { display: inline-flex; align-items: center; gap: 8px; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.07); font-family: var(--font-cond); font-size: 15px; font-weight: 700; color: var(--white); letter-spacing: 0.03em; }
+.ticker-sym { color: rgba(255,255,255,0.55); font-size: 12px; letter-spacing: 0.08em; }
 .ticker-change.up { color: #2ECC71; }
 .ticker-change.down { color: #FF4D6D; }
 .ticker-sep { display: inline-block; padding: 0 16px; color: var(--red); font-size: 14px; opacity: 0.6; }
-.ticker-news-item { display: inline-flex; align-items: center; gap: 8px; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.07); font-family: var(--font-cond); font-size: 13px; color: rgba(255,255,255,0.7); }
-.ticker-news-src { font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); flex-shrink: 0; }
+.ticker-news-item { display: inline-flex; align-items: center; gap: 10px; padding: 0 28px; border-right: 1px solid rgba(255,255,255,0.07); font-family: var(--font-cond); font-size: 15px; color: rgba(255,255,255,0.85); }
+.ticker-news-src { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); flex-shrink: 0; }
 .ticker-news-item a { color: rgba(255,255,255,0.75); text-decoration: none; }
 .ticker-news-item a:hover { color: var(--white); }
 
