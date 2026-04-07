@@ -694,43 +694,7 @@ document.addEventListener('click', function(e) {
     <h2 class="section-title">Opinion & <span class="blue">Commentary</span></h2>
     <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;">Bold opinion pieces from our contributors and columnists. Multiple voices, one mission — the conservative perspective, unfiltered and unapologetic.</p>
     <div class="blog-grid" id="blog-grid">
-      <!-- FEATURED POST -->
-      <div class="blog-featured" onclick="if(window.openBlog)openBlog(0)">
-        <div class="blog-featured-banner">
-          <span class="blog-featured-cat">Featured</span>
-        </div>
-        <div class="blog-featured-body">
-          <h3>Why Conservative Youth Media Matters More Than Ever</h3>
-          <p>The mainstream media has abandoned an entire generation of young Americans. Here's why Right Side Talks exists — and why the movement is only getting started.</p>
-          <div class="blog-featured-meta">
-            <span>RST Editorial Team</span>
-            <span>&bull;</span>
-            <span>5 min read</span>
-          </div>
-          <div style="margin-top:1rem;"><span class="blog-read-link">Read Full Article →</span></div>
-        </div>
-      </div>
-      <!-- SIDE POSTS -->
-      <div class="blog-list">
-        <div class="blog-card" onclick="if(window.openBlog)openBlog(1)">
-          <span class="blog-card-cat">Politics</span>
-          <h3>The Campus Free Speech Crisis Nobody Is Talking About</h3>
-          <div class="blog-card-meta">RST Contributor &bull; 4 min read</div>
-          <span class="blog-read-link">Read More →</span>
-        </div>
-        <div class="blog-card" onclick="if(window.openBlog)openBlog(2)">
-          <span class="blog-card-cat">Culture</span>
-          <h3>How the Left Lost the Next Generation</h3>
-          <div class="blog-card-meta">RST Contributor &bull; 6 min read</div>
-          <span class="blog-read-link">Read More →</span>
-        </div>
-        <div class="blog-card" onclick="if(window.openBlog)openBlog(3)">
-          <span class="blog-card-cat">America First</span>
-          <h3>Why We Still Believe in American Exceptionalism</h3>
-          <div class="blog-card-meta">RST Contributor &bull; 3 min read</div>
-          <span class="blog-read-link">Read More →</span>
-        </div>
-      </div>
+      <div class="archive-loading" id="blog-loading" style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted);font-family:var(--font-cond);font-size:14px;letter-spacing:0.1em;text-transform:uppercase;">Loading articles...</div>
     </div>
   </div>
 </section>
@@ -1299,59 +1263,64 @@ async function loadLatestVideos() {
 }
 
 
-const BLOG_POSTS = [
-  {
-    cat: 'Featured',
-    title: 'Why Conservative Youth Media Matters More Than Ever',
-    meta: 'Right Side Talks Staff &bull; 5 min read',
-    body: `<p>America is at a crossroads. The mainstream media — once a pillar of objective journalism — has abandoned an entire generation of young Americans. What used to be the evening news is now a platform for left-wing ideology, corporate narratives, and cancel culture enforcement.</p>
-<p>That's exactly why Right Side Talks exists.</p>
-<p>We started this organization because we saw a void. Millions of young conservatives across this country — on campuses, in communities, in high schools and colleges — had no voice. No platform. No one speaking their language or representing their values in the media landscape.</p>
-<p>We're changing that. One episode at a time. One conversation at a time. One young American at a time.</p>
-<p>The left has dominated youth media for decades. TikTok, YouTube, podcasts — they've flooded every channel with progressive messaging designed to reshape how young people think about their country, their faith, and their future. And for too long, conservatives let it happen.</p>
-<p>Not anymore. Right Side Talks is part of a national movement of young conservatives who are done sitting on the sidelines. We're taking the conversation back — unapologetically, fearlessly, and with the facts on our side.</p>
-<p>If you believe in free speech, individual liberty, America first, and the values that built this nation — this is your home. Welcome to the right side.</p>`
-  },
-  {
-    cat: 'Politics',
-    title: 'The Campus Free Speech Crisis Nobody Is Talking About',
-    meta: 'RST Staff &bull; 4 min read',
-    body: `<p>Walk onto almost any college campus in America today and try to express a conservative opinion. See what happens. You'll be shouted down, reported to the administration, or quietly blacklisted from opportunities that should be open to everyone.</p>
-<p>This isn't hypothetical. It's happening every day to conservative students at universities across the country — and the mainstream media barely covers it.</p>
-<p>Campus Front, our show dedicated to higher education, has documented case after case of conservative students being silenced, penalized for their views, or abandoned by institutions that claim to champion "diversity and inclusion" — so long as that diversity doesn't include different ideas.</p>
-<p>The First Amendment doesn't stop applying at the campus gate. Every student — liberal or conservative — deserves the right to speak freely, debate openly, and pursue truth without fear. We'll keep fighting for that right until it's a reality on every campus in America.</p>`
-  },
-  {
-    cat: 'Culture',
-    title: 'How the Left Lost the Next Generation',
-    meta: 'RST Staff &bull; 6 min read',
-    body: `<p>Something unexpected is happening in America. The generation that was supposed to be the most progressive in history is turning right — and the left has no idea how to stop it.</p>
-<p>Poll after poll shows young men in particular are abandoning the Democratic Party in record numbers. Young women are following. The shift is seismic, and it's accelerating.</p>
-<p>Why? Because the left overplayed its hand. When your political movement tells young Americans that their country is systemically evil, that their values are bigotry, and that their biology is a social construct — you lose people. Real people. People who love their country, love their families, and want a future worth building.</p>
-<p>Conservative media — including organizations like Right Side Talks — has filled the void left by a progressive movement that forgot to actually listen to young Americans. We talk about real issues. Economic freedom. National security. The cost of living. The right to speak your mind.</p>
-<p>The next generation isn't lost to the left. They're finding their way home — to the right side.</p>`
-  },
-  {
-    cat: 'America First',
-    title: 'Why We Still Believe in American Exceptionalism',
-    meta: 'RST Staff &bull; 3 min read',
-    body: `<p>They told us to be ashamed of our country. They rewrote our history. They tore down our monuments and said the American story was one of shame, not triumph.</p>
-<p>We reject that — completely and without apology.</p>
-<p>American exceptionalism is not a myth. It is the documented reality of a nation that, in less than 250 years, became the greatest force for freedom, prosperity, and human dignity the world has ever seen. A nation that freed a continent from fascism. A nation that put a man on the moon. A nation where the son of an immigrant can become President.</p>
-<p>Is America perfect? No. No nation is. But the American experiment — built on individual liberty, limited government, and the rule of law — remains humanity's best answer to the question of how free people should govern themselves.</p>
-<p>We believe that. We say it loudly. And we'll keep saying it on every platform we have.</p>`
-  }
-];
+// BLOG - Sanity CMS
+let allBlogArticles = [];
 
-window.openBlog = function(idx) {
-  const post = BLOG_POSTS[idx];
-  document.getElementById('modal-cat').textContent = post.cat;
-  document.getElementById('modal-title').textContent = post.title;
-  document.getElementById('modal-meta').innerHTML = post.meta;
-  document.getElementById('modal-body').innerHTML = post.body;
+function fmtDate(dateStr) {
+  if(!dateStr) return '';
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+
+function readTime(body) {
+  if(!body) return '3 min read';
+  const words = body.trim().split(' ').length;
+  return Math.max(1, Math.round(words / 200)) + ' min read';
+}
+
+function renderBlogGrid(articles) {
+  const grid = document.getElementById('blog-grid');
+  const loading = document.getElementById('blog-loading');
+  if(loading) loading.style.display = 'none';
+  if(!articles.length) {
+    grid.innerHTML = '<div class="archive-loading" style="grid-column:1/-1;">No articles published yet. Check back soon!</div>';
+    return;
+  }
+  const featured = articles[0];
+  const rest = articles.slice(1);
+  const featuredHTML = '<div class="blog-featured" onclick="openBlogArticle(0)">'
+    + '<div class="blog-featured-banner"><span class="blog-featured-cat">' + (featured.category || 'Featured') + '</span></div>'
+    + '<div class="blog-featured-body">'
+    + '<h3>' + featured.title + '</h3>'
+    + '<p>' + (featured.excerpt || '') + '</p>'
+    + '<div class="blog-featured-meta"><span>' + (featured.author || 'RST Contributor') + '</span><span>&bull;</span><span>' + readTime(featured.body) + '</span><span>&bull;</span><span>' + fmtDate(featured.publishedAt) + '</span></div>'
+    + '<div style="margin-top:1rem;"><span class="blog-read-link">Read Full Article →</span></div>'
+    + '</div></div>';
+  let sideHTML = '';
+  rest.slice(0, 3).forEach(function(a, i) {
+    sideHTML += '<div class="blog-card" onclick="openBlogArticle(' + (i + 1) + ')">'
+      + '<span class="blog-card-cat">' + (a.category || 'Opinion') + '</span>'
+      + '<h3>' + a.title + '</h3>'
+      + '<div class="blog-card-meta">' + (a.author || 'RST Contributor') + ' &bull; ' + readTime(a.body) + ' &bull; ' + fmtDate(a.publishedAt) + '</div>'
+      + '<span class="blog-read-link">Read More →</span></div>';
+  });
+  grid.innerHTML = featuredHTML + (rest.length ? '<div class="blog-list">' + sideHTML + '</div>' : '');
+}
+
+window.openBlogArticle = function(idx) {
+  const article = allBlogArticles[idx];
+  if(!article) return;
+  document.getElementById('modal-cat').textContent = article.category || 'Opinion';
+  document.getElementById('modal-title').textContent = article.title;
+  document.getElementById('modal-meta').innerHTML = (article.author || 'RST Contributor') + ' &bull; ' + readTime(article.body) + ' &bull; ' + fmtDate(article.publishedAt);
+  const bodyText = article.body || 'Full article coming soon.';
+  const bodyHTML = bodyText.split('\n').filter(function(p){ return p.trim(); }).map(function(p){ return '<p>' + p + '</p>'; }).join('');
+  document.getElementById('modal-body').innerHTML = bodyHTML;
   document.getElementById('blog-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
 };
+
+window.openBlog = window.openBlogArticle;
 
 window.closeBlog = function() {
   document.getElementById('blog-modal').classList.remove('open');
@@ -1361,6 +1330,19 @@ window.closeBlog = function() {
 window.closeBlogIfOverlay = function(e) {
   if(e.target === document.getElementById('blog-modal')) closeBlog();
 };
+
+async function loadArticles() {
+  try {
+    const r = await fetch('/api/articles', { signal: AbortSignal.timeout(8000) });
+    if(!r.ok) throw new Error('API error');
+    const d = await r.json();
+    allBlogArticles = d.items || [];
+    renderBlogGrid(allBlogArticles);
+  } catch(e) {
+    const grid = document.getElementById('blog-grid');
+    if(grid) grid.innerHTML = '<div class="archive-loading" style="grid-column:1/-1;">Articles coming soon!</div>';
+  }
+}
 
 // POLL
 let currentPollId = null;
@@ -1510,7 +1492,8 @@ function closePrivacy() {
   tickerTrack.innerHTML = combined + combined;
 
   await Promise.all([
-    loadLatestVideos()
+    loadLatestVideos(),
+    loadArticles()
   ]);
 })();
 </script>
