@@ -4,7 +4,6 @@
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
     { "src": "/support", "dest": "/support.html" },
     { "src": "/episodes", "dest": "/episodes.html" },
-    { "src": "/(.*\\.(js|css|ico|png|jpg|svg))", "dest": "/$1" },
     { "src": "/", "dest": "/index.html" }
   ]
 }
