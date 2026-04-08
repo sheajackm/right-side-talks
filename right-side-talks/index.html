@@ -500,7 +500,7 @@ document.addEventListener('click', function(e) {
     <li><a href="#about">About</a></li>
     <li><a href="#shows">Shows</a></li>
     <li><a href="episodes.html">Episodes</a></li>
-    <li><a href="#blog">Right Side Takes</a></li>
+    <li><a href="takes.html">Right Side Takes</a></li>
     <li><a href="#news">News</a></li>
     <li><a href="#newsletter">Newsletter</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -518,7 +518,7 @@ document.addEventListener('click', function(e) {
     <li><a href="#about" onclick="closeMenu()">About</a></li>
     <li><a href="#shows" onclick="closeMenu()">Shows</a></li>
     <li><a href="episodes.html" onclick="closeMenu()">Episodes</a></li>
-    <li><a href="#blog" onclick="closeMenu()">Right Side Takes</a></li>
+    <li><a href="takes.html" onclick="closeMenu()">Right Side Takes</a></li>
     <li><a href="#news" onclick="closeMenu()">News</a></li>
     <li><a href="#newsletter" onclick="closeMenu()">Newsletter</a></li>
     <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
@@ -697,6 +697,10 @@ document.addEventListener('click', function(e) {
     <div class="blog-grid" id="blog-grid">
       <div class="archive-loading" id="blog-loading" style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted);font-family:var(--font-cond);font-size:14px;letter-spacing:0.1em;text-transform:uppercase;">Loading articles...</div>
     </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(0,31,91,0.08);flex-wrap:wrap;gap:1rem;">
+      <a href="takes.html" style="font-family:var(--font-cond);font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--grad-blue);color:var(--white);padding:12px 24px;border-radius:5px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:var(--shadow-blue);">View All Articles →</a>
+      <span style="font-family:var(--font-cond);font-size:13px;color:var(--text-muted);letter-spacing:0.05em;">New articles published regularly by our columnists</span>
+    </div>
   </div>
 </section>
 
@@ -873,7 +877,7 @@ document.addEventListener('click', function(e) {
         <p>Whether you want to contribute, partner with us, book a guest appearance, or just say hello&mdash;we'd love to hear from you. Right Side Talks is always growing and we want you to be part of it.</p>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <span class="contact-item-text">Rightsidetalks@gmail.com</span>
+          <span class="contact-item-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a68535d524e49535e5f4e5b5651497a5d575b535614595557">[email&#160;protected]</a></span>
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -983,7 +987,7 @@ document.addEventListener('click', function(e) {
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // MARKET DATA
 const SYMBOLS = [
   {sym:'S&P 500',id:'%5EGSPC'},{sym:'DOW',id:'%5EDJI'},{sym:'NASDAQ',id:'%5EIXIC'},
@@ -1489,14 +1493,3 @@ function closePrivacy() {
       return buildNewsTickerItems();
     })()
   ]);
-  const combined = marketItems + '<span class="ticker-sep">★</span>' + newsItems;
-  tickerTrack.innerHTML = combined + combined;
-
-  await Promise.all([
-    loadLatestVideos(),
-    loadArticles()
-  ]);
-})();
-</script>
-</body>
-</html>
