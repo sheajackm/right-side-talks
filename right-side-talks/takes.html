@@ -337,7 +337,10 @@ async function loadTicker() {
       {sym:'BTC',id:'BTC-USD'},{sym:'ETH',id:'ETH-USD'},
       {sym:'AAPL',id:'AAPL'},{sym:'MSFT',id:'MSFT'},{sym:'NVDA',id:'NVDA'},
       {sym:'AMZN',id:'AMZN'},{sym:'GOOGL',id:'GOOGL'},{sym:'META',id:'META'},
-      {sym:'TSLA',id:'TSLA'},{sym:'JPM',id:'JPM'}
+      {sym:'TSLA',id:'TSLA'},{sym:'JPM',id:'JPM'},{sym:'LLY',id:'LLY'},
+      {sym:'V',id:'V'},{sym:'UNH',id:'UNH'},{sym:'XOM',id:'XOM'},
+      {sym:'MA',id:'MA'},{sym:'JNJ',id:'JNJ'},{sym:'PG',id:'PG'},
+      {sym:'HD',id:'HD'},{sym:'AVGO',id:'AVGO'},{sym:'COST',id:'COST'},{sym:'MRK',id:'MRK'}
     ];
     var results = await Promise.allSettled(symbols.map(async function(s) {
       var r = await fetch('/api/markets?symbol=' + s.id, {signal: AbortSignal.timeout(8000)});
