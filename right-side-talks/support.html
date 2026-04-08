@@ -322,7 +322,7 @@ function closeMenu() {
         Send $10 via Venmo
       </a>
       <p class="venmo-note">
-        Don't have Venmo? Email us at <a href="mailto:Rightsidetalks@gmail.com" style="color:var(--blue-mid);">Rightsidetalks@gmail.com</a> for other ways to support.
+        Don't have Venmo? Email us at <a href="/cdn-cgi/l/email-protection#7d2f141a15090e141918091c11160e3d1a101c1411531e1210" style="color:var(--blue-mid);"><span class="__cf_email__" data-cfemail="6032090708141309040514010c0b1320070d01090c4e030f0d">[email&#160;protected]</span></a> for other ways to support.
       </p>
     </div>
   </div>
@@ -380,7 +380,7 @@ function closeMenu() {
 
 <!-- TICKER -->
 <div id="ticker-bar">
-  <div class="ticker-label">Markets</div>
+  <div class="ticker-label">Markets &amp; News</div>
   <div class="ticker-track-wrap">
     <div class="ticker-track" id="ticker-track">
       <span class="ticker-item"><span class="ticker-sym">Loading...</span></span>
@@ -388,7 +388,7 @@ function closeMenu() {
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   var selectedAmount = 10;
 
   function selectAmount(el, amount) {
@@ -438,13 +438,4 @@ function closeMenu() {
         const up = q.change >= 0;
         const price = q.price > 10000 ? q.price.toLocaleString('en-US', {maximumFractionDigits:0}) : q.price.toLocaleString('en-US', {maximumFractionDigits:2, minimumFractionDigits:2});
         return '<span class="ticker-item"><span class="ticker-sym">' + q.sym + '</span>&nbsp;' + price + '&nbsp;<span class="ticker-change ' + (up?'up':'down') + '">' + (up?'&#9650;':'&#9660;') + ' ' + Math.abs(q.pct).toFixed(2) + '%</span></span>';
-      }).join('<span style="padding:0 16px;color:var(--red);opacity:0.6;">&#9733;</span>');
-      const track = document.getElementById('ticker-track');
-      track.innerHTML = html + html;
-    } catch(e) {}
-  }
-  loadTicker();
-  updateVenmoBtn(10);
-</script>
-</body>
-</html>
+      }).join('<span st
