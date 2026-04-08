@@ -52,6 +52,13 @@ const POLLS = [
     options: ['Yes — return power to states', 'No — federal standards matter', 'Shrink it but keep it'],
     start: '2026-05-19'
   },
+  {
+    id: 'poll_009',
+    question: 'Was the US-Israel war on Iran the right call?',
+    options: ['Yes — it was necessary', 'No — diplomacy first', 'Too early to tell'],
+    start: '2026-04-08',
+    breaking: true
+  },
 ];
 
 function getCurrentPoll() {
