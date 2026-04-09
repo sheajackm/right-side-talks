@@ -106,10 +106,10 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: line
 .ticker-label { background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 14px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; padding: 0 20px; height: 100%; display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
 .ticker-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.12); flex-shrink: 0; }
 .ticker-track-wrap { flex: 1; overflow: hidden; height: 100%; display: flex; align-items: center; }
-.ticker-track { display: flex; align-items: center; white-space: nowrap; animation: tickerScroll 320s linear infinite; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.ticker-track { display: flex; align-items: center; white-space: nowrap; animation: tickerScroll 240s linear infinite; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .ticker-track:hover { animation-play-state: paused; }
 @keyframes tickerScroll { 0%{transform:translateX(0)}
-@media (max-width: 700px) { .ticker-track { animation-duration: 120s !important; } }100%{transform:translateX(-50%)} }
+@media (max-width: 700px) { .ticker-track { animation-duration: 160s !important; } }100%{transform:translateX(-50%)} }
 .ticker-item { display: inline-flex; align-items: center; gap: 8px; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.1); font-family: var(--font-cond); font-size: 15px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.03em; }
 .ticker-sep { display: inline-block; padding: 0 16px; color: var(--red); font-size: 14px; opacity: 0.6; }
 .ticker-news-item { display: inline-flex; align-items: center; gap: 10px; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.1); font-family: var(--font-cond); font-size: 15px; font-weight: 700; color: #FFFFFF; }
