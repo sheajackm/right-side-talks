@@ -1501,6 +1501,18 @@ function closePrivacy() {
     loadArticles()
   ]);
 })();
+
+// Restart ticker when returning to page
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'visible') {
+    var track = document.getElementById('ticker-track');
+    if (track) {
+      track.style.animation = 'none';
+      track.offsetHeight;
+      track.style.animation = '';
+    }
+  }
+});
 </script>
 </body>
 </html>
