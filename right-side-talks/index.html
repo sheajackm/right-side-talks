@@ -159,7 +159,9 @@ section { padding: 5rem 2rem; }
 .pillar p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
 /* TEAM */
-.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; } @media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(3,1fr); } } @media (max-width: 700px) { .team-grid { grid-template-columns: repeat(2,1fr); } }
+.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; } @media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 700px) { .team-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .team-grid { grid-template-columns: 1fr; } } @media (max-width: 700px) { .team-grid { grid-template-columns: repeat(2,1fr); } }
 .team-card { background: var(--grad-card); border: 1px solid rgba(0,31,91,0.08); border-radius: 12px; padding: 2rem 1.25rem 1.75rem; text-align: center; box-shadow: var(--shadow-sm); transition: box-shadow 0.25s, transform 0.25s; }
 .team-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
 .team-avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg,#E6ECF9 0%,#C8D5F5 100%); border: 3px solid rgba(10,48,128,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.1rem; overflow: hidden; box-shadow: 0 4px 16px rgba(0,31,91,0.15); }
@@ -579,7 +581,7 @@ document.addEventListener('click', function(e) {
       <p class="section-label">The People Behind the Mic</p>
       <h2 class="section-title">Meet the <span class="blue">Team</span></h2>
       <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem;">The voices, writers, and producers driving the Right Side Talks movement from coast to coast.</p>
-            <div class="team-grid" style="grid-template-columns:repeat(4,1fr);">
+            <div class="team-grid">
         <div class="team-card">
           <div class="team-avatar"><img src="images/jack.jpg" alt="Jack Shea" /></div>
           <div class="team-name">Jack Shea</div>
@@ -877,7 +879,7 @@ document.addEventListener('click', function(e) {
         <p>Whether you want to contribute, partner with us, book a guest appearance, or just say hello&mdash;we'd love to hear from you. Right Side Talks is always growing and we want you to be part of it.</p>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <span class="contact-item-text">Rightsidetalks@gmail.com</span>
+          <span class="contact-item-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="de8cb7b9b6aaadb7babbaabfb2b5ad9eb9b3bfb7b2f0bdb1b3">[email&#160;protected]</a></span>
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -987,7 +989,7 @@ document.addEventListener('click', function(e) {
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // MARKET DATA
 const SYMBOLS = [
   {sym:'S&P 500',id:'%5EGSPC'},{sym:'DOW',id:'%5EDJI'},{sym:'NASDAQ',id:'%5EIXIC'},
@@ -1503,11 +1505,3 @@ function closePrivacy() {
 })();
 
 document.addEventListener('visibilitychange', function() {
-  if (document.visibilityState === 'visible') {
-    var track = document.getElementById('ticker-track');
-    if (track) { track.style.animation = 'none'; track.offsetHeight; track.style.animation = ''; }
-  }
-});
-</script>
-</body>
-</html>
