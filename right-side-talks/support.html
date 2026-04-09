@@ -9,18 +9,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --red: #D91E3C;
-  --red-dark: #A8152D;
-  --red-light: #FDF0F2;
-  --blue: #001F5B;
-  --blue-mid: #0A3080;
-  --blue-light: #E6ECF9;
-  --white: #FFFFFF;
-  --off-white: #F4F6FB;
-  --gold: #D4A843;
-  --text-dark: #080F20;
-  --text-muted: #4A5570;
-  --border: rgba(0,31,91,0.1);
+  --red: #D91E3C; --red-dark: #A8152D; --red-light: #FDF0F2;
+  --blue: #001F5B; --blue-mid: #0A3080; --blue-light: #E6ECF9;
+  --white: #FFFFFF; --off-white: #F4F6FB; --gold: #D4A843;
+  --text-dark: #080F20; --text-muted: #4A5570; --border: rgba(0,31,91,0.1);
   --font-display: 'Playfair Display', Georgia, serif;
   --font-cond: 'Barlow Condensed', sans-serif;
   --font-body: 'Barlow', sans-serif;
@@ -40,7 +32,7 @@ body { font-family: var(--font-body); color: var(--text-dark); background: var(-
 
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: linear-gradient(90deg, #001040 0%, #001F5B 60%, #0A2870 100%); border-bottom: 2px solid var(--red); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 68px; box-shadow: 0 4px 28px rgba(0,8,40,0.55); }
-.nav-logo { font-family: var(--font-cond); font-size: 23px; font-weight: 800; color: var(--white); letter-spacing: 0.05em; text-decoration: none; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.4); }
+.nav-logo { font-family: var(--font-cond); font-size: 23px; font-weight: 800; color: var(--white); letter-spacing: 0.05em; text-decoration: none; text-transform: uppercase; }
 .nav-logo span { background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
 .nav-links a { font-family: var(--font-cond); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; position: relative; }
@@ -65,14 +57,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: line
 .support-hero { background: var(--grad-dark); padding: 120px 2rem 5rem; text-align: center; position: relative; overflow: hidden; margin-top: 68px; }
 .support-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(10,48,128,0.55) 0%, transparent 70%); }
 .hero-stars { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 44px 44px; pointer-events: none; }
-.hero-stripe { position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, #FF4D6D 50%, var(--red) 100%); box-shadow: 0 -2px 18px rgba(217,30,60,0.4); }
+.hero-stripe { position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, #FF4D6D 50%, var(--red) 100%); }
 .hero-eyebrow { font-family: var(--font-cond); font-size: 13px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; position: relative; }
-.hero-title { font-family: var(--font-display); font-size: clamp(44px, 7vw, 80px); font-weight: 900; color: var(--white); line-height: 1.06; margin-bottom: 1rem; text-shadow: 0 4px 30px rgba(0,0,0,0.5); position: relative; }
+.hero-title { font-family: var(--font-display); font-size: clamp(44px, 7vw, 80px); font-weight: 900; color: var(--white); line-height: 1.06; margin-bottom: 1rem; position: relative; }
 .hero-title .accent { background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .hero-sub { font-size: 18px; color: rgba(255,255,255,0.64); max-width: 560px; margin: 0 auto; line-height: 1.75; position: relative; }
 
-/* SECTIONS */
-section, .support-main { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+/* MAIN */
+.support-main { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 6rem; }
 .section-label { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.75rem; display: inline-block; }
 .section-title { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); font-weight: 700; color: var(--text-dark); line-height: 1.15; margin-bottom: 1rem; }
 .section-title .blue { color: var(--blue-mid); }
@@ -90,7 +82,7 @@ section, .support-main { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; 
 .donate-header { background: var(--grad-blue); padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 .donate-header h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--white); }
 .donate-header p { font-size: 15px; color: rgba(255,255,255,0.6); margin-top: 4px; }
-.venmo-badge { background: #3D95CE; color: var(--white); font-family: var(--font-cond); font-size: 15px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 24px; border-radius: 6px; display: flex; align-items: center; gap: 8px; white-space: nowrap; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+.venmo-badge { background: #3D95CE; color: var(--white); font-family: var(--font-cond); font-size: 15px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 24px; border-radius: 6px; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .donate-body { padding: 2.5rem; }
 
 /* AMOUNT BUTTONS */
@@ -109,7 +101,6 @@ section, .support-main { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; 
 .custom-dollar { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--text-muted); }
 .custom-input { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--text-dark); border: none; outline: none; background: transparent; width: 100%; }
 .custom-input::placeholder { color: rgba(0,31,91,0.2); }
-
 .donate-divider { border: none; border-top: 1px solid rgba(0,31,91,0.08); margin: 1.5rem 0; }
 
 /* STEPS */
@@ -121,7 +112,7 @@ section, .support-main { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; 
 .step-text code { background: var(--blue-light); color: var(--blue-mid); font-size: 13px; padding: 2px 8px; border-radius: 4px; font-family: monospace; font-weight: 700; }
 
 /* VENMO BUTTON */
-.venmo-cta { display: block; width: 100%; background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 17px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; padding: 16px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; transition: box-shadow 0.2s, transform 0.15s; box-shadow: var(--shadow-red); }
+.venmo-cta { display: block; width: 100%; background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 17px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; padding: 16px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; transition: box-shadow 0.2s, transform 0.15s; box-shadow: var(--shadow-red); position: relative; z-index: 1; }
 .venmo-cta:hover { box-shadow: 0 14px 40px rgba(217,30,60,0.48); transform: translateY(-2px); }
 .venmo-note { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 0.75rem; line-height: 1.5; }
 
@@ -135,9 +126,9 @@ section, .support-main { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; 
 .impact-desc h4 { font-family: var(--font-cond); font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue-mid); margin-bottom: 4px; }
 .impact-desc p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-/* SHARE BANNER */
+/* SHARE */
 .share-section { background: var(--grad-red); border-radius: 12px; padding: 3rem 2.5rem; text-align: center; margin-bottom: 3rem; position: relative; overflow: hidden; box-shadow: var(--shadow-red); }
-.share-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 100% at 50% 0%, rgba(255,255,255,0.08) 0%, transparent 70%); }
+.share-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 100% at 50% 0%, rgba(255,255,255,0.08) 0%, transparent 70%); pointer-events: none; }
 .share-section h2 { font-family: var(--font-display); font-size: clamp(24px, 3vw, 36px); font-weight: 900; color: var(--white); margin-bottom: 0.5rem; position: relative; }
 .share-section p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 1.75rem; position: relative; }
 .share-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; position: relative; }
@@ -153,6 +144,7 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.25); }
 /* TICKER */
 #ticker-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: linear-gradient(90deg,#050D20 0%,#0A1535 100%); border-top: 2px solid var(--red); height: 52px; display: flex; align-items: center; overflow: hidden; box-shadow: 0 -4px 24px rgba(0,5,20,0.55); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .ticker-label { background: var(--grad-red); color: var(--white); font-family: var(--font-cond); font-size: 14px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; padding: 0 20px; height: 100%; display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
+.ticker-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.12); flex-shrink: 0; }
 .ticker-track-wrap { flex: 1; overflow: hidden; height: 100%; display: flex; align-items: center; }
 .ticker-track { display: flex; align-items: center; white-space: nowrap; animation: tickerScroll 320s linear infinite; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .ticker-track:hover { animation-play-state: paused; }
@@ -162,7 +154,6 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.25); }
 .ticker-change.up { color: #2ECC71; }
 .ticker-change.down { color: #FF4D6D; }
 .ticker-sep { display: inline-block; padding: 0 16px; color: var(--red); font-size: 14px; opacity: 0.6; }
-.ticker-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.12); flex-shrink: 0; }
 
 /* RESPONSIVE */
 @media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
@@ -205,7 +196,7 @@ function closeMenu() {
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#shows">Shows</a></li>
     <li><a href="episodes.html">Episodes</a></li>
-    <li><a href="index.html#blog">Right Side Takes</a></li>
+    <li><a href="takes.html">Right Side Takes</a></li>
     <li><a href="index.html#news">News</a></li>
     <li><a href="index.html#contact">Contact</a></li>
     <li><a href="support.html" class="nav-cta">Support Us</a></li>
@@ -222,7 +213,7 @@ function closeMenu() {
     <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
     <li><a href="index.html#shows" onclick="closeMenu()">Shows</a></li>
     <li><a href="episodes.html" onclick="closeMenu()">Episodes</a></li>
-    <li><a href="index.html#blog" onclick="closeMenu()">Right Side Takes</a></li>
+    <li><a href="takes.html" onclick="closeMenu()">Right Side Takes</a></li>
     <li><a href="index.html#news" onclick="closeMenu()">News</a></li>
     <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
   </ul>
@@ -241,28 +232,16 @@ function closeMenu() {
 <!-- MAIN -->
 <div class="support-main">
 
-  <!-- WHY SUPPORT -->
   <div style="margin-bottom:1rem;">
     <p class="section-label">Why It Matters</p>
     <h2 class="section-title">Fuel the <span class="blue">Conservative</span> Voice</h2>
     <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem;">Independent conservative media runs on the support of patriots like you. Here's exactly what your contribution makes possible.</p>
   </div>
+
   <div class="why-grid">
-    <div class="why-card">
-      <div class="why-icon">🎙️</div>
-      <h3>Fund Our Shows</h3>
-      <p>Help us produce more episodes, better equipment, and higher quality content for our growing audience.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">🇺🇸</div>
-      <h3>Grow the Movement</h3>
-      <p>Your support helps us reach more young conservatives on campuses and communities across the nation.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">📣</div>
-      <h3>Fight the Narrative</h3>
-      <p>Help us counter mainstream media bias with unapologetic conservative commentary and reporting.</p>
-    </div>
+    <div class="why-card"><div class="why-icon">🎙️</div><h3>Fund Our Shows</h3><p>Help us produce more episodes, better equipment, and higher quality content for our growing audience.</p></div>
+    <div class="why-card"><div class="why-icon">🇺🇸</div><h3>Grow the Movement</h3><p>Your support helps us reach more young conservatives on campuses and communities across the nation.</p></div>
+    <div class="why-card"><div class="why-icon">📣</div><h3>Fight the Narrative</h3><p>Help us counter mainstream media bias with unapologetic conservative commentary and reporting.</p></div>
   </div>
 
   <!-- DONATE -->
@@ -280,10 +259,10 @@ function closeMenu() {
     <div class="donate-body">
       <p style="font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Select an amount</p>
       <div class="amount-grid">
-        <button class="amount-btn" onclick="selectAmount(this,5)">$5<span class="amount-label">Coffee Fund</span></button>
-        <button class="amount-btn active" onclick="selectAmount(this,10)">$10<span class="amount-label">Supporter</span></button>
-        <button class="amount-btn" onclick="selectAmount(this,25)">$25<span class="amount-label">Patriot</span></button>
-        <button class="amount-btn" onclick="selectAmount(this,50)">$50<span class="amount-label">Champion</span></button>
+        <button class="amount-btn" onclick="selectAmount(this, 5)">$5<span class="amount-label">Coffee Fund</span></button>
+        <button class="amount-btn active" onclick="selectAmount(this, 10)">$10<span class="amount-label">Supporter</span></button>
+        <button class="amount-btn" onclick="selectAmount(this, 25)">$25<span class="amount-label">Patriot</span></button>
+        <button class="amount-btn" onclick="selectAmount(this, 50)">$50<span class="amount-label">Champion</span></button>
       </div>
 
       <div class="custom-amount-wrap">
@@ -299,33 +278,22 @@ function closeMenu() {
       <div class="venmo-steps">
         <div class="venmo-step">
           <div class="step-num">1</div>
-          <div class="step-text">
-            <h4>Choose your amount above</h4>
-            <p>Pick a preset amount or type in your own custom amount.</p>
-          </div>
+          <div class="step-text"><h4>Choose your amount above</h4><p>Pick a preset or type your own custom amount.</p></div>
         </div>
         <div class="venmo-step">
           <div class="step-num">2</div>
-          <div class="step-text">
-            <h4>Click the button below</h4>
-            <p>You'll be taken to Venmo to complete your donation to <code>@rightsidetalks</code>.</p>
-          </div>
+          <div class="step-text"><h4>Click the button below</h4><p>You'll be taken to Venmo to complete your donation to <code>@rightsidetalks</code>.</p></div>
         </div>
         <div class="venmo-step">
           <div class="step-num">3</div>
-          <div class="step-text">
-            <h4>Confirm &amp; send</h4>
-            <p>Add a note like <code>Supporting RST</code> and hit pay. Thank you!</p>
-          </div>
+          <div class="step-text"><h4>Confirm &amp; send</h4><p>Add a note like <code>Supporting RST</code> and hit pay. Thank you!</p></div>
         </div>
       </div>
 
       <a id="venmo-btn" href="https://venmo.com/rightsidetalks?txn=pay&amount=10&note=Supporting%20RST" target="_blank" rel="noopener" class="venmo-cta">
         Send $10 via Venmo
       </a>
-      <p class="venmo-note">
-        Don't have Venmo? Email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f2d1618170b0c161b1a0b1e13140c3f18121e1613511c1012">[email&#160;protected]</a> for other ways to support.
-      </p>
+      <p class="venmo-note">Don't have Venmo? Email us at <a href="mailto:Rightsidetalks@gmail.com" style="color:var(--blue-mid);">Rightsidetalks@gmail.com</a> for other ways to support.</p>
     </div>
   </div>
 
@@ -335,22 +303,10 @@ function closeMenu() {
     <h2 class="section-title">Your <span class="blue">Impact</span></h2>
     <p>Every contribution — big or small — goes directly toward building the Right Side Talks platform. Here's what your support makes possible:</p>
     <div class="impact-grid">
-      <div class="impact-card">
-        <div class="impact-amount">$5</div>
-        <div class="impact-desc"><h4>Keeps the Mic On</h4><p>Covers one episode's hosting and streaming costs to keep our content live and accessible.</p></div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-amount">$10</div>
-        <div class="impact-desc"><h4>Content Creation</h4><p>Helps fund editing, graphics, and production tools that make our shows look and sound professional.</p></div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-amount">$25</div>
-        <div class="impact-desc"><h4>Campus Outreach</h4><p>Supports on-the-ground reporting and outreach to conservative students at colleges nationwide.</p></div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-amount">$50</div>
-        <div class="impact-desc"><h4>Growth &amp; Expansion</h4><p>Funds advertising, new equipment, and platform growth to reach more Americans with our message.</p></div>
-      </div>
+      <div class="impact-card"><div class="impact-amount">$5</div><div class="impact-desc"><h4>Keeps the Mic On</h4><p>Covers one episode's hosting and streaming costs to keep our content live and accessible.</p></div></div>
+      <div class="impact-card"><div class="impact-amount">$10</div><div class="impact-desc"><h4>Content Creation</h4><p>Helps fund editing, graphics, and production tools that make our shows look and sound professional.</p></div></div>
+      <div class="impact-card"><div class="impact-amount">$25</div><div class="impact-desc"><h4>Campus Outreach</h4><p>Supports on-the-ground reporting and outreach to conservative students at colleges nationwide.</p></div></div>
+      <div class="impact-card"><div class="impact-amount">$50</div><div class="impact-desc"><h4>Growth &amp; Expansion</h4><p>Funds advertising, new equipment, and platform growth to reach more Americans with our message.</p></div></div>
     </div>
   </div>
 
@@ -376,6 +332,7 @@ function closeMenu() {
     <a href="index.html" style="color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">Home</a>
     <a href="index.html#about" style="color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">About</a>
     <a href="index.html#contact" style="color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">Contact</a>
+    <a href="support.html" style="color:var(--red);font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">Support Us</a>
   </div>
   <p style="margin-top:1rem;">&copy; 2026 Right Side Talks LLC. All rights reserved.</p>
 </footer>
@@ -391,7 +348,8 @@ function closeMenu() {
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  // VENMO
   var selectedAmount = 10;
 
   function selectAmount(el, amount) {
@@ -421,29 +379,61 @@ function closeMenu() {
     btn.textContent = 'Send $' + amount + ' via Venmo';
   }
 
-  // Load ticker
+  // TICKER
+  var SYMBOLS = [
+    {sym:'S&P 500',id:'%5EGSPC'},{sym:'DOW',id:'%5EDJI'},{sym:'NASDAQ',id:'%5EIXIC'},
+    {sym:'BTC',id:'BTC-USD'},{sym:'ETH',id:'ETH-USD'},
+    {sym:'AAPL',id:'AAPL'},{sym:'MSFT',id:'MSFT'},{sym:'NVDA',id:'NVDA'},
+    {sym:'AMZN',id:'AMZN'},{sym:'GOOGL',id:'GOOGL'},{sym:'META',id:'META'},
+    {sym:'TSLA',id:'TSLA'},{sym:'JPM',id:'JPM'},{sym:'LLY',id:'LLY'},
+    {sym:'V',id:'V'},{sym:'UNH',id:'UNH'},{sym:'XOM',id:'XOM'},
+    {sym:'MA',id:'MA'},{sym:'JNJ',id:'JNJ'},{sym:'PG',id:'PG'},
+    {sym:'HD',id:'HD'},{sym:'AVGO',id:'AVGO'},{sym:'COST',id:'COST'},{sym:'MRK',id:'MRK'}
+  ];
+
   async function loadTicker() {
     try {
-      const symbols = [
-        {sym:'S&P 500',id:'%5EGSPC'},{sym:'DOW',id:'%5EDJI'},{sym:'NASDAQ',id:'%5EIXIC'},
-        {sym:'BTC',id:'BTC-USD'},{sym:'ETH',id:'ETH-USD'},
-        {sym:'AAPL',id:'AAPL'},{sym:'MSFT',id:'MSFT'},{sym:'NVDA',id:'NVDA'},
-        {sym:'AMZN',id:'AMZN'},{sym:'GOOGL',id:'GOOGL'},{sym:'META',id:'META'},
-        {sym:'TSLA',id:'TSLA'},{sym:'JPM',id:'JPM'},{sym:'LLY',id:'LLY'},
-        {sym:'V',id:'V'},{sym:'UNH',id:'UNH'},{sym:'XOM',id:'XOM'},
-        {sym:'MA',id:'MA'},{sym:'JNJ',id:'JNJ'},{sym:'PG',id:'PG'},
-        {sym:'HD',id:'HD'},{sym:'AVGO',id:'AVGO'},{sym:'COST',id:'COST'},{sym:'MRK',id:'MRK'}
-      ];
-      const results = await Promise.allSettled(symbols.map(async s => {
-        const r = await fetch('/api/markets?symbol=' + s.id, {signal: AbortSignal.timeout(6000)});
+      var results = await Promise.allSettled(SYMBOLS.map(async function(s) {
+        var r = await fetch('/api/markets?symbol=' + s.id, {signal: AbortSignal.timeout(8000)});
         if (!r.ok) return null;
-        const d = await r.json();
+        var d = await r.json();
         return d.price ? {sym: s.sym, price: d.price, pct: d.pct, change: d.change} : null;
       }));
-      const valid = results.filter(r => r.status === 'fulfilled' && r.value).map(r => r.value);
+      var valid = results.filter(function(r) { return r.status === 'fulfilled' && r.value; }).map(function(r) { return r.value; });
       if (!valid.length) return;
-      const html = valid.map(q => {
-        const up = q.change >= 0;
-        const price = q.price > 10000 ? q.price.toLocaleString('en-US', {maximumFractionDigits:0}) : q.price.toLocaleString('en-US', {maximumFractionDigits:2, minimumFractionDigits:2});
-        return `<span class="ticker-item"><span class="ticker-sym">${q.sym}</span>&nbsp;<span>${price}</span>&nbsp;<span class="ticker-change ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(q.pct).toFixed(2)}%</span></span>`;
+
+      var marketHtml = valid.map(function(q) {
+        var up = q.change >= 0;
+        var price = q.price > 10000 ? q.price.toLocaleString('en-US',{maximumFractionDigits:0}) : q.price.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:2});
+        return '<span class="ticker-item"><span class="ticker-sym">' + q.sym + '</span>&nbsp;<span>' + price + '</span>&nbsp;<span class="ticker-change ' + (up?'up':'down') + '">' + (up?'&#9650;':'&#9660;') + ' ' + Math.abs(q.pct).toFixed(2) + '%</span></span>';
       }).join('');
+
+      var newsHtml = '';
+      try {
+        var nr = await fetch('/api/news', {signal: AbortSignal.timeout(10000)});
+        if (nr.ok) {
+          var nd = await nr.json();
+          newsHtml = (nd.items || []).slice(0,10).map(function(a) {
+            return '<span class="ticker-item"><span class="ticker-sym" style="color:var(--gold);font-size:11px;">' + a.label + '</span>&nbsp;<a href="' + a.link + '" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.75);text-decoration:none;">' + a.title + '</a></span>';
+          }).join('');
+        }
+      } catch(e) {}
+
+      var combined = marketHtml + '<span class="ticker-sep">&#9733;</span>' + newsHtml;
+      var track = document.getElementById('ticker-track');
+      track.innerHTML = combined + combined;
+    } catch(e) {}
+  }
+
+  document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+      var track = document.getElementById('ticker-track');
+      if (track) { track.style.animation = 'none'; track.offsetHeight; track.style.animation = ''; }
+    }
+  });
+
+  updateVenmoBtn(10);
+  loadTicker();
+</script>
+</body>
+</html>
