@@ -149,6 +149,7 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.25); }
 .ticker-track { display: flex; align-items: center; white-space: nowrap; animation: tickerScroll 320s linear infinite; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .ticker-track:hover { animation-play-state: paused; }
 @keyframes tickerScroll { 0%{transform:translateX(0) translateZ(0)}100%{transform:translateX(-50%) translateZ(0)} }
+@media (max-width: 700px) { .ticker-track { animation-duration: 120s !important; } }
 .ticker-item { display: inline-flex; align-items: center; gap: 8px; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.1); font-family: var(--font-cond); font-size: 15px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.03em; }
 .ticker-sym { color: #FFFFFF; font-size: 15px; font-weight: 900; letter-spacing: 0.1em; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
 .ticker-change.up { color: #2ECC71; }
@@ -293,7 +294,7 @@ function closeMenu() {
       <a id="venmo-btn" href="https://venmo.com/rightsidetalks?txn=pay&amount=10&note=Supporting%20RST" target="_blank" rel="noopener" class="venmo-cta">
         Send $10 via Venmo
       </a>
-      <p class="venmo-note">Don't have Venmo? Email us at <a href="mailto:Rightsidetalks@gmail.com" style="color:var(--blue-mid);">Rightsidetalks@gmail.com</a> for other ways to support.</p>
+      <p class="venmo-note">Don't have Venmo? Email us at <a href="/cdn-cgi/l/email-protection#96c4fff1fee2e5fff2f3e2f7fafde5d6f1fbf7fffab8f5f9fb" style="color:var(--blue-mid);"><span class="__cf_email__" data-cfemail="24764d434c50574d40415045484f57644349454d480a474b49">[email&#160;protected]</span></a> for other ways to support.</p>
     </div>
   </div>
 
@@ -343,12 +344,12 @@ function closeMenu() {
   <div class="ticker-divider"></div>
   <div class="ticker-track-wrap">
     <div class="ticker-track" id="ticker-track">
-      <span class="ticker-item"><span class="ticker-sym">Loading...</span></span>
+      <span class="ticker-item"><span class="ticker-sym">S&amp;P 500</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">DOW</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">NASDAQ</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">BTC</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">ETH</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">AAPL</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">MSFT</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">NVDA</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">AMZN</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">GOOGL</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">TSLA</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">S&amp;P 500</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">DOW</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">NASDAQ</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">BTC</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">ETH</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">AAPL</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">MSFT</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">NVDA</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">AMZN</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">GOOGL</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span><span class="ticker-item"><span class="ticker-sym">TSLA</span>&nbsp;<span style="color:rgba(255,255,255,0.4)">Loading...</span></span>
     </div>
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   var selectedAmount = 10;
 
   function selectAmount(el, amount) {
@@ -420,18 +421,11 @@ function closeMenu() {
       var combined = marketHtml + '<span class="ticker-sep">&#9733;</span>' + newsHtml;
       var track = document.getElementById('ticker-track');
       track.innerHTML = combined + combined;
+      track.style.animation = 'none';
+      track.offsetHeight;
+      track.style.animation = '';
     } catch(e) {}
   }
 
   document.addEventListener('visibilitychange', function() {
-    if (document.visibilityState === 'visible') {
-      var track = document.getElementById('ticker-track');
-      if (track) { track.style.animation = 'none'; track.offsetHeight; track.style.animation = ''; }
-    }
-  });
-
-  updateVenmoBtn(10);
-  loadTicker();
-</script>
-</body>
-</html>
+    if (document.visibilityState
