@@ -948,7 +948,7 @@ document.addEventListener('click', function(e) {
 </footer>
 
 <!-- COOKIE BANNER -->
-<div id="cookie-banner">
+<div id="cookie-banner" style="display:none">
   <p class="cookie-text">
     We use cookies to improve your experience and analyze site traffic. By clicking "Accept," you agree to our use of cookies.
     <a href="#" onclick="document.getElementById('privacy-modal').style.display='flex';return false;">Privacy Policy</a>
@@ -1502,6 +1502,17 @@ function closePrivacy() {
     loadLatestVideos(),
     loadArticles()
   ]);
+})();
+
+// Cookie banner - only show if not already answered
+(function() {
+  try {
+    if (!localStorage.getItem('rst_cookie')) {
+      document.getElementById('cookie-banner').style.display = 'flex';
+    }
+  } catch(e) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
 })();
 
 document.addEventListener('visibilitychange', function() {
