@@ -635,15 +635,21 @@ function getSlugFromUrl() {
   return params.get('slug') || params.get('id');
 }
 
-function setShareLinks(title, url) {
-  const encoded = encodeURIComponent(url);
+function setShareLinks(title, url, slug) {
+  // Use the OG proxy URL for sharing so crawlers see proper preview cards
+  const ogUrl = 'https://www.rightsidetalksmedia.com/api/og?slug=' + encodeURIComponent(slug);
+  const encoded = encodeURIComponent(ogUrl);
   const encodedTitle = encodeURIComponent(title + ' — Right Side Talks');
   document.getElementById('share-x').href = `https://x.com/intent/tweet?text=${encodedTitle}&url=${encoded}&via=rightsidetalks`;
   document.getElementById('share-fb').href = `https://www.facebook.com/sharer/sharer.php?u=${encoded}`;
 }
 
 window.copyLink = function() {
-  const url = window.location.href;
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug') || params.get('id');
+  const url = slug
+    ? 'https://www.rightsidetalksmedia.com/api/og?slug=' + encodeURIComponent(slug)
+    : window.location.href;
   navigator.clipboard.writeText(url).then(() => {
     const btn = document.getElementById('share-copy');
     btn.classList.add('copied');
@@ -770,7 +776,7 @@ function renderArticle(article) {
   document.getElementById('article-sidebar').style.display = 'block';
 
   // Share links
-  setShareLinks(article.title, window.location.href);
+  setShareLinks(article.title, window.location.href, articleSlug);
 }
 
 async function loadArticle() {
