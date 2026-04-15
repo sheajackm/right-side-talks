@@ -255,6 +255,13 @@ nav {
   margin-right: 0.08em; margin-top: 0.1em;
   color: var(--blue-mid);
 }
+@media (max-width: 1024px) {
+  .article-content p:first-child::first-letter {
+    font-size: 1em; float: none;
+    margin-right: 0; margin-top: 0;
+    font-weight: inherit;
+  }
+}
 .article-content h2 {
   font-family: var(--font-display); font-size: 26px; font-weight: 700;
   color: var(--text-dark); margin: 2.5rem 0 1rem;
