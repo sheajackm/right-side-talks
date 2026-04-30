@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Right Side Talks</title>
 <meta name="description" content="Read the latest opinion and commentary from Right Side Talks." />
+<meta property="og:site_name" content="Right Side Talks" />
+<meta property="og:type" content="article" />
+<meta property="og:title" id="og-title" content="Right Side Talks" />
+<meta property="og:description" id="og-description" content="Read the latest opinion and commentary from Right Side Talks." />
+<meta property="og:image" id="og-image" content="https://rightsidetalks.com/images/og-image.jpg" />
+<meta property="og:url" id="og-url" content="https://rightsidetalks.com/article.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@rightsidetalks" />
+<meta name="twitter:title" id="tw-title" content="Right Side Talks" />
+<meta name="twitter:description" id="tw-description" content="Read the latest opinion and commentary from Right Side Talks." />
+<meta name="twitter:image" id="tw-image" content="https://rightsidetalks.com/images/og-image.jpg" />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRNNMZY53"></script>
@@ -351,6 +362,24 @@ async function loadArticle() {
     document.getElementById('author-card-role').textContent = role;
     document.getElementById('author-card-bio').textContent = bio;
     document.getElementById('author-card').style.display = 'flex';
+
+    // Update OG meta tags for sharing
+    var articleUrl = 'https://rightsidetalks.com/article.html?slug=' + encodeURIComponent(slug);
+    var authorPhoto = authorPhotos[authorName] ? 'https://rightsidetalks.com/images/' + authorPhotos[authorName] : 'https://rightsidetalks.com/images/og-image.jpg';
+    var shareTitle = a.title + ' | Right Side Talks';
+    var shareDesc = a.excerpt || ('By ' + authorName + ' — Right Side Talks');
+
+    document.title = shareTitle;
+    document.querySelector('meta[name="description"]').setAttribute('content', shareDesc);
+
+    var setMeta = function(id, val) { var el = document.getElementById(id); if (el) el.setAttribute('content', val); };
+    setMeta('og-title', shareTitle);
+    setMeta('og-description', shareDesc);
+    setMeta('og-image', authorPhoto);
+    setMeta('og-url', articleUrl);
+    setMeta('tw-title', shareTitle);
+    setMeta('tw-description', shareDesc);
+    setMeta('tw-image', authorPhoto);
 
     // Show content
     document.getElementById('article-loading').style.display = 'none';
