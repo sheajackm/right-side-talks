@@ -88,6 +88,15 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: line
 .share-btn.copy { color: var(--blue-mid); border-color: var(--blue-mid); background: var(--white); }
 .share-btn.copy:hover { background: var(--blue-mid); color: var(--white); }
 
+/* AUTHOR CARD */
+.author-card { display: flex; align-items: center; gap: 1.5rem; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2.5rem; box-shadow: var(--shadow-sm); }
+.author-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--blue-light); flex-shrink: 0; }
+.author-avatar-placeholder { width: 80px; height: 80px; border-radius: 50%; background: var(--blue-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--blue-mid); }
+.author-info { flex: 1; }
+.author-info-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; }
+.author-info-role { font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--grad-red); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem; display: block; }
+.author-info-bio { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
 /* BACK LINK */
 .back-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-cond); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
 .back-link:hover { color: var(--red); }
@@ -185,6 +194,14 @@ function closeMenu() {
 <!-- BODY -->
 <div class="article-wrap" id="article-wrap" style="display:none;">
   <a class="back-link" href="takes.html">← Back to Right Side Takes</a>
+  <div class="author-card" id="author-card" style="display:none;">
+    <div id="author-avatar-wrap"></div>
+    <div class="author-info">
+      <div class="author-info-name" id="author-card-name"></div>
+      <span class="author-info-role" id="author-card-role"></span>
+      <div class="author-info-bio" id="author-card-bio"></div>
+    </div>
+  </div>
   <div class="article-excerpt" id="article-excerpt"></div>
   <div class="article-body" id="article-body"></div>
   <div class="share-bar">
@@ -233,11 +250,12 @@ async function loadArticle() {
 
   try {
     // Try slug lookup first
-    var isId = slug.length > 20 && !slug.includes('-');
+    // Detect if slug is actually a Sanity _id (UUID format with hyphens and length > 30)
+    var isId = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(slug);
     var endpoint = isId
       ? '/api/articles?id=' + encodeURIComponent(slug)
       : '/api/articles?slug=' + encodeURIComponent(slug);
-    
+
     var r = await fetch(endpoint);
     if (!r.ok) throw new Error();
     var data = await r.json();
@@ -284,6 +302,46 @@ async function loadArticle() {
     var title = encodeURIComponent(a.title + ' | Right Side Talks');
     document.getElementById('share-x').href = 'https://x.com/intent/tweet?url=' + url + '&text=' + title;
     document.getElementById('share-fb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+
+    // Author card
+    var authorPhotos = {
+      'Jack Shea': 'jack.jpg',
+      'Nick Cribbet': 'nick.jpg',
+      'Cecelia Brown': 'cecelia.jpg',
+      'Caleb Grubb': 'caleb.jpg',
+      'Ryan McCombs': 'ryan.jpg',
+      'Gavin Krauciunas': 'gavin.jpg',
+      'John DePerno': 'john.jpg',
+      'John R. DePerno': 'john.jpg',
+      'Austin DeLorme': 'austin.jpg'
+    };
+    var authorBios = {
+      'Jack Shea': 'Jack is the Owner and Founder of Right Side Talks. A Business Management major at St. Bonaventure University, Jack serves as College Republicans President and Executive Director of the NY State Federation of College Republicans.',
+      'Nick Cribbet': 'Nick is the Vice President of Operations at Right Side Talks. Nick is a St. Bonaventure University student with strong aspirations of becoming an aerospace engineer.',
+      'Cecelia Brown': 'Cecelia is the Creative Director and Executive Producer at Right Side Talks. An undergraduate student at St. Bonaventure University, she brings creativity and vision to everything RST produces.',
+      'Caleb Grubb': 'Caleb is the Director of Talent Acquisition at Right Side Talks. He is dedicated to finding and developing the next generation of conservative voices for the organization.',
+      'Ryan McCombs': 'Ryan is a Columnist at Right Side Talks, covering politics and culture from a conservative perspective.',
+      'Gavin Krauciunas': 'Gavin is a Columnist at Right Side Talks, bringing sharp analysis and commentary to the conservative conversation.',
+      'John DePerno': 'John is from Utica, New York and attends Siena College, where he majors in Political Science and minors in History. A lifelong Republican, he has worked with all three levels of government and plans to attend law school after graduation.',
+      'John R. DePerno': 'John is from Utica, New York and attends Siena College, where he majors in Political Science and minors in History. A lifelong Republican, he has worked with all three levels of government and plans to attend law school after graduation.',
+      'Austin DeLorme': 'Austin is a Political Science major and Journalism minor at the University of Rochester. He has served as an opinion columnist for the Campus Times and has made appearances on Rochester news radio discussing youth political engagement within the Republican Party.'
+    };
+
+    var authorName = a.author || '';
+    var photoFile = authorPhotos[authorName];
+    var bio = a.authorBio || authorBios[authorName] || '';
+    var role = a.authorRole || 'Columnist';
+
+    var avatarWrap = document.getElementById('author-avatar-wrap');
+    if (photoFile) {
+      avatarWrap.innerHTML = '<img class="author-avatar" src="/images/' + photoFile + '" alt="' + authorName + '" onerror="this.parentNode.innerHTML='<div class=\"author-avatar-placeholder\">' + authorName.charAt(0) + '</div>'">';
+    } else {
+      avatarWrap.innerHTML = '<div class="author-avatar-placeholder">' + (authorName.charAt(0) || 'R') + '</div>';
+    }
+    document.getElementById('author-card-name').textContent = authorName;
+    document.getElementById('author-card-role').textContent = role;
+    document.getElementById('author-card-bio').textContent = bio;
+    document.getElementById('author-card').style.display = 'flex';
 
     // Show content
     document.getElementById('article-loading').style.display = 'none';
