@@ -27,7 +27,7 @@ const AUTHOR_IMAGES = {
   'Jenna Smith': 'Jenna_Smith.jpg',
   'Halle Janik': 'Halle_Janik.jpg',
   'Kamdyn McClain': 'Kamdyn_McClain.jpg',
-  'Emma Symula': 'Emma_Symula.jpg',
+  'Leigha Morgan': 'Leigha_Morgan.jpg',
   'Sarah Prentice': 'Sarah_Prentice.jpg'
 };
 const DEFAULT_IMAGE = 'images/og-image.jpg';
