@@ -26,7 +26,9 @@ const AUTHOR_IMAGES = {
   'Halle Janik': 'Halle_Janik.jpg',
   'Kamdyn McClain': 'Kamdyn_McClain.jpg',
   'Leigha Morgan': 'Leigha_Morgan.jpg',
-  'Sarah Prentice': 'Sarah_Prentice.jpg'
+  'Sarah Prentice': 'Sarah_Prentice.jpg',
+  'Clarise Tujardon': 'Clarise_Tujardon.jpg',
+  'David Messinger': 'David_Messinger.jpg'
 };
 const DEFAULT_IMAGE = 'images/og-image.jpg';
 
