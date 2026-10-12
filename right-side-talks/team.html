@@ -519,6 +519,7 @@ document.addEventListener('click', function(e) {
   <ul class="nav-links">
     <li><a href="index.html#home">Home</a></li>
     <li><a href="index.html#about">About</a></li>
+    <li><a href="team.html">Meet the Team</a></li>
     <li><a href="index.html#shows">Shows</a></li>
     <li><a href="episodes.html">Episodes</a></li>
     <li><a href="takes.html">Right Side Takes</a></li>
@@ -537,6 +538,7 @@ document.addEventListener('click', function(e) {
   <ul>
     <li><a href="index.html#home" onclick="closeMenu()">Home</a></li>
     <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
+    <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
     <li><a href="index.html#shows" onclick="closeMenu()">Shows</a></li>
     <li><a href="episodes.html" onclick="closeMenu()">Episodes</a></li>
     <li><a href="takes.html" onclick="closeMenu()">Right Side Takes</a></li>
@@ -1252,36 +1254,40 @@ function closePrivacy() {
   // Cookie banner
   try {
     if(localStorage.getItem('rst_cookie_consent')) {
-      document.getElementById('cookie-banner').style.display = 'none';
+      var cb = document.getElementById('cookie-banner'); if (cb) cb.style.display = 'none';
     }
   } catch(e) {}
 
-  initPoll();
+  try { initPoll(); } catch(e) {}
 
   // Load real ticker data
   const tickerTrack = document.getElementById('ticker-track');
   const [marketItems, newsItems] = await Promise.all([
-    buildMarketItems(),
+    (async () => { try { return await buildMarketItems(); } catch(e) { return ''; } })(),
     (async () => {
-      allArticles = await fetchAllNews();
-      renderNews('all');
-      return buildNewsTickerItems();
+      try {
+        allArticles = await fetchAllNews();
+        try { renderNews('all'); } catch(e) {}
+        return buildNewsTickerItems();
+      } catch(e) { return ''; }
     })()
   ]);
-  const combined = marketItems + '<span class="ticker-sep">★</span>' + newsItems;
-  tickerTrack.innerHTML = combined + combined;
-  tickerTrack.style.animation = 'none';
-  tickerTrack.offsetHeight;
-  tickerTrack.style.animation = '';
+  if (tickerTrack) {
+    const combined = marketItems + '<span class="ticker-sep">★</span>' + newsItems;
+    tickerTrack.innerHTML = combined + combined;
+    tickerTrack.style.animation = 'none';
+    tickerTrack.offsetHeight;
+    tickerTrack.style.animation = '';
+  }
 
   await Promise.all([
-    loadLatestVideos(),
-    loadArticles()
+    (async () => { try { await loadLatestVideos(); } catch(e) {} })(),
+    (async () => { try { await loadArticles(); } catch(e) {} })()
   ]);
 })();
 
 (function() {
-  try { if (!localStorage.getItem('rst_cookie')) { document.getElementById('cookie-banner').style.display = 'flex'; } } catch(e) { document.getElementById('cookie-banner').style.display = 'flex'; }
+  try { var cb2 = document.getElementById('cookie-banner'); if (cb2 && !localStorage.getItem('rst_cookie')) { cb2.style.display = 'flex'; } } catch(e) {}
 })();
 
 document.addEventListener('visibilitychange', function() {
