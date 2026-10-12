@@ -155,6 +155,13 @@ section { padding: 5rem 2rem; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .about-text p { font-size: 17px; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.75; }
 .about-text p strong { color: var(--text-dark); font-weight: 600; }
+.team-cta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-top: 2.5rem; padding: 1.6rem 1.9rem; border-radius: 16px; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 28px rgba(0,31,91,0.18); text-decoration: none; transition: transform .18s ease, box-shadow .18s ease; }
+.team-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,31,91,0.28); }
+.team-cta-text h3 { font-family: var(--font-cond); font-size: 22px; font-weight: 800; letter-spacing: 0.02em; text-transform: uppercase; color: #fff; margin-bottom: 4px; }
+.team-cta-text p { font-size: 15px; color: rgba(255,255,255,0.78); line-height: 1.5; margin: 0; }
+.team-cta-arrow { font-family: var(--font-cond); font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; background: var(--red); padding: 0.7rem 1.25rem; border-radius: 999px; white-space: nowrap; }
+.team-section-heading { font-family: var(--font-cond); font-size: 15px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--blue-light); }
+@media (max-width: 600px) { .team-cta { padding: 1.3rem 1.4rem; } .team-cta-arrow { width: 100%; text-align: center; } }
 .about-pillars { display: flex; flex-direction: column; gap: 1rem; }
 .pillar { background: linear-gradient(135deg,#fff 0%,#f5f8ff 100%); border-left: 4px solid var(--red); padding: 1.2rem 1.5rem; border-radius: 0 8px 8px 0; box-shadow: var(--shadow-sm); transition: box-shadow 0.2s, transform 0.2s; }
 .pillar:hover { box-shadow: var(--shadow-md); transform: translateX(4px); }
@@ -592,7 +599,7 @@ document.addEventListener('click', function(e) {
     <div style="margin-top:5rem;">
       <p class="section-label">The People Behind the Mic</p>
       <h2 class="section-title">Meet the <span class="blue">Team</span></h2>
-      <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem;">The voices, writers, and producers driving the Right Side Talks movement from coast to coast.</p>
+      <p style="font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem;">The leadership driving the Right Side Talks movement from coast to coast.</p>
             <div class="team-grid">
         <div class="team-card">
           <div class="team-avatar"><img src="images/jack.jpg" alt="Jack Shea" /></div>
@@ -624,97 +631,14 @@ document.addEventListener('click', function(e) {
           <span class="team-role">Social Media Director &amp; Contributor</span>
           <p class="team-bio">Maura is a media professional, broadcaster, and committed biblical Christian. She is the creator and host of the Say It Anyway Podcast, a faith-centered show exploring Christianity, culture, personal testimony, and current events. Professionally, she serves as a News Producer and On-Air Reporter for iHeartRadio, with a background spanning digital media, video production, and leadership through Turning Point USA. Maura is passionate about using media to communicate truth and make a lasting impact through journalism, ministry, and public engagement.</p>
         </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/ryan.jpg" alt="Ryan McCombs" /></div>
-          <div class="team-name">Ryan McCombs</div>
-          <span class="team-role">Columnist &amp; Contributor</span>
-          <p class="team-bio">Ryan McCombs currently serves as President of both the College Republicans and TPUSA at St. Bonaventure University, where he studies political science. He's also a campus coordinator for TPUSA and the volunteer coordinator for Virginia McIntyre's congressional campaign in New York's 25th congressional district. As an unwavering conservative and an aspiring public defender, Ryan believes in free markets, a strong national defense, and a restorative system of justice grounded in constitutional principles and religion.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/austin.jpg" alt="Austin DeLorme" /></div>
-          <div class="team-name">Austin DeLorme</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Austin is a Political Science major and Journalism minor at the University of Rochester. He has served as an opinion columnist for the university's Campus Times, covering political polarization, international affairs, and community politics. Austin has also made appearances on Rochester news radio discussing youth political engagement within the Republican Party.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Nick_Bausch.jpg" alt="Nicholas Bausch" /></div>
-          <div class="team-name">Nicholas Bausch</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Nicholas is from Syracuse, New York, and graduated from the University at Buffalo in 2024 with a degree in Political Science. He has worked for a variety of non-profits and campaigns across the country, and has collaborated closely with Turning Point USA. Nicholas has been actively involved in the conservative movement since 2020.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Owen_Tuori.jpg" alt="Owen Tuori" /></div>
-          <div class="team-name">Owen Tuori</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Owen is an Accounting major and Legal Studies minor at St. John Fisher University in his hometown of Rochester, New York, where he is active in student government and business school leadership. A proud member of the Conservative Party, he blends libertarian leanings with a traditional conservative outlook&mdash;championing free markets, personal liberty, limited government, and a strong national defense. With a deep interest in how economics, politics, and philosophy intersect to shape American society, his focus runs to the internal workings of parties and how polling and finances move races. As a columnist, Owen looks forward to writing essays exploring the philosophical underpinnings of conservative political thought.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Mike_Xu.jpg" alt="Mike Xu" /></div>
-          <div class="team-name">Mike Xu</div>
-          <span class="team-role">Contributor</span>
-          <p class="team-bio">Mike Xu is from Akron, Ohio, and attends Ohio State University, where he's joining the Turning Point USA cause for open debate and reasoning. Once set on becoming a lawyer, he now channels a blend of libertarian, conservative, and Christian convictions into an unapologetic case for American patriotism, sharing his views on Instagram as @Theskilledsamurai. A scholar at heart, Mike is devoted to constant research and rooting out fraud in the legal system, believing a healthy government reflects a healthy society. He champions the American dream and the nuclear family &mdash; and says he'll see you in the 2044 elections.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Kobe_Kirschner.jpg" alt="Kobe Kirschner" /></div>
-          <div class="team-name">Kobe Kirschner</div>
-          <span class="team-role">Columnist &amp; Contributor</span>
-          <p class="team-bio">Kobe Kirschner is a proud tenth-generation American and a direct descendant of Founding Fathers Benjamin Rush and Matthew Thornton. Born and raised in South Florida, he earned both his Bachelor's degree in Economics and his Master's degree in Business Analytics from FAU by the age of 21. As a county leader of the Fishback for Florida Governor campaign, Kobe is a dedicated grassroots activist committed to making America more affordable and advocating for foreign policy that minimizes unnecessary entanglements overseas.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Jack_Molaison.jpg" alt="Jack Molaison" /></div>
-          <div class="team-name">Jack Molaison</div>
-          <span class="team-role">Columnist &amp; Contributor</span>
-          <p class="team-bio">Jack Molaison is an 18-year-old political journalist and analyst. He started in grassroots campaign politics, speaking at two stops on Turning Point Action's SuperChase Rally Tour, before advancing to lead the youth branch of a Midwestern 501(c)(3). His experience spans campaigning, fundraising, and legislating, and he has been honored to speak at a Wisconsin Forum banquet and at Turning Point USA's CLS 2026.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Aubree_Gearhart.jpg" alt="Aubree Gearhart" /></div>
-          <div class="team-name">Aubree Gearhart</div>
-          <span class="team-role">Content Creator</span>
-          <p class="team-bio">Aubree Gearhart is a 21-year-old senior studying Criminal Justice/Pre-Law, Communications, and Forensic Science. She leads two Turning Point USA chapters — one on her college campus and a newly established community chapter. A lifelong conservative drawn to the movement's spirit of open, like-minded fellowship, Aubree plans to commission into the U.S. Air Force after graduation, following in the footsteps of her father and carrying a deep respect for those who serve.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Ashley_Stuart.jpg" alt="Ashley Stuart" /></div>
-          <div class="team-name">Ashley Stuart</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Ashley Stuart is a young political leader from California whose passion for politics began at age eight. She has been involved with Turning Point USA for nearly six years, founding the first TPUSA chapter in her high school district and serving as its president, growing it into one of the largest clubs on campus. She is now launching a new TPUSA chapter at her college while remaining active in local politics. The youngest graduate of the Leadership Institute's CLC Advanced School of Politics and the top graduate of its Youth Leadership School, Ashley has built experience in grassroots organizing, campaign strategy, political advocacy, and event planning through TPUSA and the Los Angeles County Lincoln Club. She is committed to advancing civic engagement and conservative leadership at the local, state, and national levels.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Noah_Miller.jpg" alt="Noah Miller" /></div>
-          <div class="team-name">Noah Miller</div>
-          <span class="team-role">Content Creator</span>
-          <p class="team-bio">Noah Miller is a dedicated Christian whose faith and conservative values guide his life with integrity, compassion, and purpose. He values family deeply and considers the support of loved ones one of life's greatest blessings. In his free time, he enjoys football and admires the teamwork, discipline, and perseverance the sport reflects. Noah is known for his strong character, unwavering faith, and commitment to the people and principles that matter most.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Jenna_Smith.jpg" alt="Jenna Smith" /></div>
-          <div class="team-name">Jenna Smith</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Jenna Smith is a senior business major with a minor in Communications at her university, where she also competes as a collegiate volleyball player. On campus, she serves as President of her Turning Point USA chapter, leading efforts to bring conservative ideas into everyday campus conversations. Jenna is passionate about reaching America's youth and believes lasting change starts with helping people view the world through a lens of common sense and logic.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Halle_Janik.jpg" alt="Halle Janik" /></div>
-          <div class="team-name">Halle Janik</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Halle Janik is a junior in the nursing program at Reinhardt University. She is on the school volleyball team and serves as TPUSA Vice President. Halle enjoys staying active, being outdoors, and spending time with friends. She is passionate about her faith and fighting for this country that God has blessed us with, and enjoys voicing her opinion on politics and the current events affecting us.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Kamdyn_McClain.jpg" alt="Kamdyn McClain" /></div>
-          <div class="team-name">Kamdyn McClain</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Kamdyn McClain currently serves as a Legislative Aide in the United States Senate, working for Senator Alan Armstrong of Oklahoma. Prior to this, Kamdyn was an intern in the office of then-Senator Markwayne Mullin, and in the White House Office of Trade and Manufacturing Policy. Kamdyn currently resides in Washington, DC, but is originally from Olean, NY. His time there, seeing the firsthand effects of neoliberal economic and neoconservative foreign policy decisions, continues to inform Kamdyn's politics.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Leigha_Morgan.jpg" alt="Leigha Morgan" /></div>
-          <div class="team-name">Leigha Morgan</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Leigha Morgan is a conservative student who recently relocated to Washington, DC from Vermont to study Political Science, and has been enthralled by politics since she was about thirteen. She is fervently passionate about working class Americans, and most of her work analyzes the efficacy of policies that directly impact working class populations — a focus she explores in her blog, Writing On The Wall. A political commentator online who has appeared on several podcasts, Leigha believes there is great value in hosting difficult discussions that incite debate: the conversations we avoid are often the ones that need to be had for real societal change. She recently attended YALCON 2026 and is set to interview Vermont house candidates ahead of the upcoming elections.</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><img src="images/Sarah_Prentice.jpg" alt="Sarah Prentice" /></div>
-          <div class="team-name">Sarah Prentice</div>
-          <span class="team-role">Columnist</span>
-          <p class="team-bio">Sarah Prentice is a SUNY Brockport alumna with a degree in political science who currently works as a broadcast producer for iHeartRadio. She has experience in radio, newswriting, non-profit communications, and grassroots activism. Sarah started her college career working for Turning Point USA as a campus coordinator and chapter president, then developed a love for newswriting and reporting after joining Campus Reform as a correspondent, later interning for Media Research Center TV. During her senior year she worked full-time as Outreach Coordinator for Feminists Choosing Life of NY, publishing opinion pieces in the Democrat and Chronicle, Christian Post, Good Newsroom, and more. With a passion for media and communications, she believes truthful and objective reporting is essential to the American republic.</p>
-        </div>
       </div>
+      <a href="team.html" class="team-cta">
+        <div class="team-cta-text">
+          <h3>Meet the Full Team</h3>
+          <p>Our columnists, contributors, and content creators from coast to coast.</p>
+        </div>
+        <span class="team-cta-arrow">View All 23 &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
