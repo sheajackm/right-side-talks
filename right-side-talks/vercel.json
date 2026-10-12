@@ -26,6 +26,10 @@
       "dest": "/takes.html"
     },
     {
+      "src": "/team",
+      "dest": "/team.html"
+    },
+    {
       "src": "/",
       "dest": "/index.html"
     }
