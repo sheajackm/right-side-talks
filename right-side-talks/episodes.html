@@ -71,6 +71,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: line
 .archive-show-tag.rst { background: linear-gradient(135deg,#E8253F,#A8152D); color: white; }
 .archive-show-tag.bottomline { background: linear-gradient(135deg,#0A3080,#000E35); color: white; }
 .archive-show-tag.cecelia { background: linear-gradient(135deg,#1A2744,#060E26); color: white; }
+.archive-show-tag.sayitanyway { background: linear-gradient(135deg,#1DB954,#0E7A35); color: white; }
 .archive-info { padding: 1rem 1.25rem 1.25rem; flex: 1; }
 .archive-info h3 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--text-dark); line-height: 1.35; margin-bottom: 0.35rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .archive-meta { font-family: var(--font-cond); font-size: 11px; color: var(--text-muted); letter-spacing: 0.06em; }
@@ -130,6 +131,7 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.25); }
     <button class="filter-btn" onclick="filterArchive('rst',this)">Right Side Talks</button>
     <button class="filter-btn" onclick="filterArchive('bottomline',this)">The Bottomline w/ Ryan McCombs</button>
     <button class="filter-btn" onclick="filterArchive('cecelia',this)">Cecelia Talks Show</button>
+    <button class="filter-btn" onclick="filterArchive('sayitanyway',this)">Say It Anyway w/ Maura London</button>
     <span class="filter-count" id="episode-count"></span>
   </div>
 </div>
@@ -163,7 +165,8 @@ let archiveFilter = 'all';
 const CHANNEL_MAP = {
   'Right Side Talks': { key: 'rst', label: 'Right Side Talks' },
   'The Bottomline w/ Ryan McCombs': { key: 'bottomline', label: 'The Bottomline' },
-  'Cecelia Talks Show': { key: 'cecelia', label: 'Cecelia Talks' }
+  'Cecelia Talks Show': { key: 'cecelia', label: 'Cecelia Talks' },
+  'Say It Anyway Podcast': { key: 'sayitanyway', label: 'Say It Anyway' }
 };
 
 function showKey(item) {
@@ -193,7 +196,8 @@ function fmtAgo(dateStr) {
 
 function renderArchiveCard(item) {
   const vid = item.videoId || ytVideoId(item.link);
-  const thumb = vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : '';
+  // Spotify episodes ship their own artwork; YouTube keeps deriving from the id.
+  const thumb = item.thumbnail || (vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : '');
   const show = showKey(item);
   const label = showLabel(item);
   return `<a class="archive-card" href="${item.link}" target="_blank" rel="noopener" data-show="${show}">
@@ -242,11 +246,16 @@ window.loadMoreArchive = function() {
 async function loadArchive() {
   const grid = document.getElementById('archive-grid');
   try {
-    const r = await fetch('/api/youtube', {signal: AbortSignal.timeout(10000)});
-    if(!r.ok) throw new Error('API failed');
-    const d = await r.json();
-    if(!d.items || !d.items.length) throw new Error('No items');
-    allArchiveVideos = d.items;
+    const [yt, sp] = await Promise.all([
+      fetch('/api/youtube', {signal: AbortSignal.timeout(10000)})
+        .then(r => r.ok ? r.json() : {items:[]}).catch(() => ({items:[]})),
+      fetch('/api/spotify', {signal: AbortSignal.timeout(10000)})
+        .then(r => r.ok ? r.json() : {items:[]}).catch(() => ({items:[]}))
+    ]);
+    const merged = [].concat(yt.items || [], sp.items || [])
+      .sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
+    if(!merged.length) throw new Error('No items');
+    allArchiveVideos = merged;
     renderArchive();
   } catch(e) {
     grid.innerHTML = '<div class="archive-loading">Episodes temporarily unavailable. <a href="https://m.youtube.com/@RightSideTalks" target="_blank" style="color:var(--red)">Visit our channel →</a></div>';
