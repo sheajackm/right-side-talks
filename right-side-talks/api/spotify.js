@@ -33,9 +33,15 @@ const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours
 // Access token cache (Spotify tokens last 1 hour).
 let tokenCache = { token: null, expires: 0 };
 
+// Last auth attempt's outcome, surfaced by ?debug=1 (never the secret itself).
+let lastAuthNote = 'not attempted';
+
 async function getAccessToken() {
   if (tokenCache.token && Date.now() < tokenCache.expires) return tokenCache.token;
-  if (!CLIENT_ID || !CLIENT_SECRET) return null;
+  if (!CLIENT_ID || !CLIENT_SECRET) {
+    lastAuthNote = `missing env vars (id:${CLIENT_ID ? 'set' : 'MISSING'}, secret:${CLIENT_SECRET ? 'set' : 'MISSING'})`;
+    return null;
+  }
 
   const basic = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
   const r = await fetch('https://accounts.spotify.com/api/token', {
@@ -46,10 +52,19 @@ async function getAccessToken() {
     },
     body: 'grant_type=client_credentials'
   });
-  if (!r.ok) return null;
+  if (!r.ok) {
+    let detail = '';
+    try { detail = (await r.text()).slice(0, 200); } catch (e) {}
+    lastAuthNote = `Spotify token HTTP ${r.status}: ${detail}`;
+    return null;
+  }
 
   const j = await r.json();
-  if (!j.access_token) return null;
+  if (!j.access_token) {
+    lastAuthNote = 'token response had no access_token';
+    return null;
+  }
+  lastAuthNote = 'ok';
 
   tokenCache = {
     token: j.access_token,
@@ -114,6 +129,33 @@ function normalizeDate(d, precision) {
 
 module.exports = async (req, res) => {
   try {
+    // Visit /api/spotify?debug=1 to see why a lookup failed. Reports whether the
+    // env vars are visible and what Spotify replied — never the secret itself.
+    if (req.query && req.query.debug) {
+      const token = await getAccessToken();
+      let showNote = 'not attempted';
+      if (token) {
+        try {
+          const sr = await fetch(
+            `https://api.spotify.com/v1/shows/${SHOWS[0].id}?market=${MARKET}`,
+            { headers: { 'Authorization': `Bearer ${token}` } }
+          );
+          showNote = sr.ok ? 'show lookup ok' : `show lookup HTTP ${sr.status}: ${(await sr.text()).slice(0, 200)}`;
+        } catch (e) { showNote = 'show lookup threw: ' + e.message; }
+      }
+      res.setHeader('Cache-Control', 'no-store');
+      return res.status(200).json({
+        clientIdPresent: !!CLIENT_ID,
+        clientIdLength: CLIENT_ID ? CLIENT_ID.length : 0,
+        clientSecretPresent: !!CLIENT_SECRET,
+        clientSecretLength: CLIENT_SECRET ? CLIENT_SECRET.length : 0,
+        tokenObtained: !!token,
+        authNote: lastAuthNote,
+        showNote,
+        showId: SHOWS[0].id
+      });
+    }
+
     if (cache.items && (Date.now() - cache.timestamp) < CACHE_DURATION) {
       res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=300');
       return res.status(200).json({ items: cache.items, cached: true });
