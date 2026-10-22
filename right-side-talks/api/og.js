@@ -22,14 +22,10 @@ const AUTHOR_IMAGES = {
   'Maura London': 'maura.jpg',
   'Mike Xu': 'Mike_Xu.jpg',
   'Kobe Kirschner': 'Kobe_Kirschner.jpg',
-  'Jack Molaison': 'Jack_Molaison.jpg',
   'Ashley Stuart': 'Ashley_Stuart.jpg',
   'Jenna Smith': 'Jenna_Smith.jpg',
-  'Halle Janik': 'Halle_Janik.jpg',
-  'Kamdyn McClain': 'Kamdyn_McClain.jpg',
   'Leigha Morgan': 'Leigha_Morgan.jpg',
   'Sarah Prentice': 'Sarah_Prentice.jpg',
-  'Clarise Tujardon': 'Clarise_Tujardon.jpg',
   'David Messinger': 'David_Messinger.jpg'
 };
 const DEFAULT_IMAGE = 'images/og-image.jpg';
