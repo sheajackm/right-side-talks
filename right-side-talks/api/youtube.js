@@ -1,4 +1,4 @@
-// Deploy marker: 3-channel feed (RST + Bottomline + Cecelia) — v3 2026-07-07
+// Deploy marker: 4-channel feed (RST + Bottomline + Cecelia + Alex Stone) — v4 2026-10-30
 // Right Side Talks — combined YouTube feed
 // Pulls uploads from multiple channels, merges them, and returns newest-first.
 //
@@ -12,7 +12,8 @@
 const CHANNELS = [
   { id: 'UCpbgusSKZhNJphR0HOHPJ0Q', name: 'Right Side Talks' },
   { id: 'UCDx4aqBxdjpbjbZTJz9Wmvg', name: 'The Bottomline w/ Ryan McCombs' },
-  { id: 'UCYxag04icPWcJNGHIw_bhaQ', name: 'Cecelia Talks Show' }
+  { id: 'UCYxag04icPWcJNGHIw_bhaQ', name: 'Cecelia Talks Show' },
+  { id: 'UC0x-lLMynVtYILfo0sJrOng', name: 'The Alex Stone Show' }
 ];
 
 // Prefer the Vercel environment variable; fall back to the inline key so the
