@@ -26,6 +26,7 @@ const AUTHOR_IMAGES = {
   'Jenna Smith': 'Jenna_Smith.jpg',
   'Leigha Morgan': 'Leigha_Morgan.jpg',
   'Sarah Prentice': 'Sarah_Prentice.jpg',
+  'Tatum Young': 'Tatum_Young.jpg',
   'David Messinger': 'David_Messinger.jpg'
 };
 const DEFAULT_IMAGE = 'images/og-image.jpg';
